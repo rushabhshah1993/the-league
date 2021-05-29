@@ -8,6 +8,7 @@
     "webpack": "webpack",
     "start": "webpack serve"
   },
+  "homepage": "https://rushabhshah1993.github.io/the-league/",
   "author": "Rushabh M. Shah",
   "license": "ISC",
   "devDependencies": {
