@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const SRC_DIR = "src";
 const DES_DIR = "build";
@@ -63,7 +64,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, SRC_DIR, 'index.html'),
             filename: 'index.html'
-        })
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, SRC_DIR, 'assets'),
+                    to: path.resolve(__dirname, DES_DIR)
+                }
+            ]
+        }),
     ]
 
 }
