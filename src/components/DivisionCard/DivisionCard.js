@@ -11,14 +11,13 @@ const DivisionCard = props => {
 
     if(Object.keys(props.fighters).length > 0 && !leader) {
         let leader = props.fighters[props.division.leader];
-        let imgPath = `./../../assets/images/${leader.firstName} ${leader.lastName}.png`;
         setLeader(leader);
-        // setImgPath(imgPath);
     }
     
     useEffect(() => {
         if(imgPath === null && leader !== null) {
-            import(`./../../assets/images/${leader.firstName} ${leader.lastName}.png`).then(response => {
+            let imgPath = `./../../assets/images/${leader.firstName} ${leader.lastName}.png`;
+            import(imgPath).then(response => {
                 console.log(response.default);
                 setImgPath(response.default);
             })

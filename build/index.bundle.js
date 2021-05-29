@@ -477,7 +477,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/esm/react-router.js\");\n/* harmony import */ var _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DivisionCard.scss */ \"./src/components/DivisionCard/DivisionCard.scss\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\n\nvar DivisionCard = function DivisionCard(props) {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),\n      _useState2 = _slicedToArray(_useState, 2),\n      leader = _useState2[0],\n      setLeader = _useState2[1];\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),\n      _useState4 = _slicedToArray(_useState3, 2),\n      imgPath = _useState4[0],\n      setImgPath = _useState4[1];\n\n  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useHistory)();\n\n  if (Object.keys(props.fighters).length > 0 && !leader) {\n    var _leader = props.fighters[props.division.leader];\n\n    var _imgPath = \"./../../assets/images/\".concat(_leader.firstName, \" \").concat(_leader.lastName, \".png\");\n\n    setLeader(_leader);\n    setImgPath(_imgPath);\n  }\n\n  var navigateToDivision = function navigateToDivision() {\n    history.push(\"/divisions/\".concat(props.division.id));\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.divisionCard,\n    onClick: navigateToDivision\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.slantBG\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.headerSlanted\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.divisionName\n  }, props.division.label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.currentRound\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.live\n  }), \"Round \", props.division.currentRound)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.cardContent\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.champNo\n  }, \"#1\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.fighter\n  }, leader === null || leader === void 0 ? void 0 : leader.firstName, \" \", leader === null || leader === void 0 ? void 0 : leader.lastName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.fighterImg,\n    src: imgPath\n  }));\n};\n\nvar mapStateToProps = function mapStateToProps(state) {\n  return {\n    fighters: state.fighters\n  };\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps)(DivisionCard));\n\n//# sourceURL=webpack://the-league/./src/components/DivisionCard/DivisionCard.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/esm/react-router.js\");\n/* harmony import */ var _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DivisionCard.scss */ \"./src/components/DivisionCard/DivisionCard.scss\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\n\nvar DivisionCard = function DivisionCard(props) {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),\n      _useState2 = _slicedToArray(_useState, 2),\n      leader = _useState2[0],\n      setLeader = _useState2[1];\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),\n      _useState4 = _slicedToArray(_useState3, 2),\n      imgPath = _useState4[0],\n      setImgPath = _useState4[1];\n\n  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useHistory)();\n\n  if (Object.keys(props.fighters).length > 0 && !leader) {\n    var _leader = props.fighters[props.division.leader];\n\n    var _imgPath = \"./../../assets/images/\".concat(_leader.firstName, \" \").concat(_leader.lastName, \".png\");\n\n    setLeader(_leader); // setImgPath(imgPath);\n  }\n\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    if (imgPath === null && leader !== null) {\n      __webpack_require__(\"./src/assets/images lazy recursive ^\\\\.\\\\/.*\\\\.png$\")(\"./\".concat(leader.firstName, \" \").concat(leader.lastName, \".png\")).then(function (response) {\n        console.log(response[\"default\"]);\n        setImgPath(response[\"default\"]);\n      });\n    }\n  }, [leader]);\n\n  var navigateToDivision = function navigateToDivision() {\n    history.push(\"/divisions/\".concat(props.division.id));\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.divisionCard,\n    onClick: navigateToDivision\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.slantBG\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.headerSlanted\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.divisionName\n  }, props.division.label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.currentRound\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.live\n  }), \"Round \", props.division.currentRound)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.cardContent\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.champNo\n  }, \"#1\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.fighter\n  }, leader === null || leader === void 0 ? void 0 : leader.firstName, \" \", leader === null || leader === void 0 ? void 0 : leader.lastName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    className: _DivisionCard_scss__WEBPACK_IMPORTED_MODULE_2__.default.fighterImg,\n    src: imgPath\n  }));\n};\n\nvar mapStateToProps = function mapStateToProps(state) {\n  return {\n    fighters: state.fighters\n  };\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps)(DivisionCard));\n\n//# sourceURL=webpack://the-league/./src/components/DivisionCard/DivisionCard.js?");
 
 /***/ }),
 
@@ -1663,6 +1663,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction valueOf(obj) {\n  return obj.valueOf ? obj.valueOf() : Object.prototype.valueOf.call(obj);\n}\n\nfunction valueEqual(a, b) {\n  // Test for strict equality first.\n  if (a === b) return true;\n\n  // Otherwise, if either of them == null they are not equal.\n  if (a == null || b == null) return false;\n\n  if (Array.isArray(a)) {\n    return (\n      Array.isArray(b) &&\n      a.length === b.length &&\n      a.every(function(item, index) {\n        return valueEqual(item, b[index]);\n      })\n    );\n  }\n\n  if (typeof a === 'object' || typeof b === 'object') {\n    var aValue = valueOf(a);\n    var bValue = valueOf(b);\n\n    if (aValue !== a || bValue !== b) return valueEqual(aValue, bValue);\n\n    return Object.keys(Object.assign({}, a, b)).every(function(key) {\n      return valueEqual(a[key], b[key]);\n    });\n  }\n\n  return false;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (valueEqual);\n\n\n//# sourceURL=webpack://the-league/./node_modules/value-equal/esm/value-equal.js?");
 
+/***/ }),
+
+/***/ "./src/assets/images lazy recursive ^\\.\\/.*\\.png$":
+/*!****************************************************************!*\
+  !*** ./src/assets/images/ lazy ^\.\/.*\.png$ namespace object ***!
+  \****************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var map = {\n\t\"./Aashna Jogani.png\": [\n\t\t\"./src/assets/images/Aashna Jogani.png\",\n\t\t\"src_assets_images_Aashna_Jogani_png\"\n\t],\n\t\"./Aishwarya Sharma.png\": [\n\t\t\"./src/assets/images/Aishwarya Sharma.png\",\n\t\t\"src_assets_images_Aishwarya_Sharma_png\"\n\t],\n\t\"./Amruta Date.png\": [\n\t\t\"./src/assets/images/Amruta Date.png\",\n\t\t\"src_assets_images_Amruta_Date_png\"\n\t],\n\t\"./Anika Beri.png\": [\n\t\t\"./src/assets/images/Anika Beri.png\",\n\t\t\"src_assets_images_Anika_Beri_png\"\n\t],\n\t\"./Anmol Pandya.png\": [\n\t\t\"./src/assets/images/Anmol Pandya.png\",\n\t\t\"src_assets_images_Anmol_Pandya_png\"\n\t],\n\t\"./Ashwini Date.png\": [\n\t\t\"./src/assets/images/Ashwini Date.png\",\n\t\t\"src_assets_images_Ashwini_Date_png\"\n\t],\n\t\"./Darshita Bhatt.png\": [\n\t\t\"./src/assets/images/Darshita Bhatt.png\",\n\t\t\"src_assets_images_Darshita_Bhatt_png\"\n\t],\n\t\"./Diana Chan.png\": [\n\t\t\"./src/assets/images/Diana Chan.png\",\n\t\t\"src_assets_images_Diana_Chan_png\"\n\t],\n\t\"./Drishti Valecha.png\": [\n\t\t\"./src/assets/images/Drishti Valecha.png\",\n\t\t\"src_assets_images_Drishti_Valecha_png\"\n\t],\n\t\"./Hetal Boricha.png\": [\n\t\t\"./src/assets/images/Hetal Boricha.png\",\n\t\t\"src_assets_images_Hetal_Boricha_png\"\n\t],\n\t\"./Hinal Parekh.png\": [\n\t\t\"./src/assets/images/Hinal Parekh.png\",\n\t\t\"src_assets_images_Hinal_Parekh_png\"\n\t],\n\t\"./Isha Haria.png\": [\n\t\t\"./src/assets/images/Isha Haria.png\",\n\t\t\"src_assets_images_Isha_Haria_png\"\n\t],\n\t\"./Jacqueline Furtado.png\": [\n\t\t\"./src/assets/images/Jacqueline Furtado.png\",\n\t\t\"src_assets_images_Jacqueline_Furtado_png\"\n\t],\n\t\"./Jinali Shah.png\": [\n\t\t\"./src/assets/images/Jinali Shah.png\",\n\t\t\"src_assets_images_Jinali_Shah_png\"\n\t],\n\t\"./Kinjal Solanki.png\": [\n\t\t\"./src/assets/images/Kinjal Solanki.png\",\n\t\t\"src_assets_images_Kinjal_Solanki_png\"\n\t],\n\t\"./Komal Madamwar.png\": [\n\t\t\"./src/assets/images/Komal Madamwar.png\",\n\t\t\"src_assets_images_Komal_Madamwar_png\"\n\t],\n\t\"./Kripa Jalan.png\": [\n\t\t\"./src/assets/images/Kripa Jalan.png\",\n\t\t\"src_assets_images_Kripa_Jalan_png\"\n\t],\n\t\"./Krishi Punamiya.png\": [\n\t\t\"./src/assets/images/Krishi Punamiya.png\",\n\t\t\"src_assets_images_Krishi_Punamiya_png\"\n\t],\n\t\"./Kriti Kapoor.png\": [\n\t\t\"./src/assets/images/Kriti Kapoor.png\",\n\t\t\"src_assets_images_Kriti_Kapoor_png\"\n\t],\n\t\"./Mahima Thakur.png\": [\n\t\t\"./src/assets/images/Mahima Thakur.png\",\n\t\t\"src_assets_images_Mahima_Thakur_png\"\n\t],\n\t\"./Mhafrin Basta.png\": [\n\t\t\"./src/assets/images/Mhafrin Basta.png\",\n\t\t\"src_assets_images_Mhafrin_Basta_png\"\n\t],\n\t\"./Mridula Jadhav.png\": [\n\t\t\"./src/assets/images/Mridula Jadhav.png\",\n\t\t\"src_assets_images_Mridula_Jadhav_png\"\n\t],\n\t\"./Natasha Arez.png\": [\n\t\t\"./src/assets/images/Natasha Arez.png\",\n\t\t\"src_assets_images_Natasha_Arez_png\"\n\t],\n\t\"./Neha Gupta.png\": [\n\t\t\"./src/assets/images/Neha Gupta.png\",\n\t\t\"src_assets_images_Neha_Gupta_png\"\n\t],\n\t\"./Priyanka Gandhi.png\": [\n\t\t\"./src/assets/images/Priyanka Gandhi.png\",\n\t\t\"src_assets_images_Priyanka_Gandhi_png\"\n\t],\n\t\"./Rashna Irani.png\": [\n\t\t\"./src/assets/images/Rashna Irani.png\",\n\t\t\"src_assets_images_Rashna_Irani_png\"\n\t],\n\t\"./Roopanshi Bhatt.png\": [\n\t\t\"./src/assets/images/Roopanshi Bhatt.png\",\n\t\t\"src_assets_images_Roopanshi_Bhatt_png\"\n\t],\n\t\"./Rushika Mangrola.png\": [\n\t\t\"./src/assets/images/Rushika Mangrola.png\",\n\t\t\"src_assets_images_Rushika_Mangrola_png\"\n\t],\n\t\"./Sachi Maker.png\": [\n\t\t\"./src/assets/images/Sachi Maker.png\",\n\t\t\"src_assets_images_Sachi_Maker_png\"\n\t],\n\t\"./Sayali Raut.png\": [\n\t\t\"./src/assets/images/Sayali Raut.png\",\n\t\t\"src_assets_images_Sayali_Raut_png\"\n\t],\n\t\"./Shraddha Bhansali.png\": [\n\t\t\"./src/assets/images/Shraddha Bhansali.png\",\n\t\t\"src_assets_images_Shraddha_Bhansali_png\"\n\t],\n\t\"./Tanvi Shah.png\": [\n\t\t\"./src/assets/images/Tanvi Shah.png\",\n\t\t\"src_assets_images_Tanvi_Shah_png\"\n\t],\n\t\"./Trishala Sharma.png\": [\n\t\t\"./src/assets/images/Trishala Sharma.png\",\n\t\t\"src_assets_images_Trishala_Sharma_png\"\n\t],\n\t\"./Unnati Vora.png\": [\n\t\t\"./src/assets/images/Unnati Vora.png\",\n\t\t\"src_assets_images_Unnati_Vora_png\"\n\t],\n\t\"./Venessa Arez.png\": [\n\t\t\"./src/assets/images/Venessa Arez.png\",\n\t\t\"src_assets_images_Venessa_Arez_png\"\n\t],\n\t\"./Vidhi Parmar.png\": [\n\t\t\"./src/assets/images/Vidhi Parmar.png\",\n\t\t\"src_assets_images_Vidhi_Parmar_png\"\n\t],\n\t\"./Vinaya Rao.png\": [\n\t\t\"./src/assets/images/Vinaya Rao.png\",\n\t\t\"src_assets_images_Vinaya_Rao_png\"\n\t],\n\t\"./Yashada Sharma.png\": [\n\t\t\"./src/assets/images/Yashada Sharma.png\",\n\t\t\"src_assets_images_Yashada_Sharma_png\"\n\t]\n};\nfunction webpackAsyncContext(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\treturn Promise.resolve().then(() => {\n\t\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\t\te.code = 'MODULE_NOT_FOUND';\n\t\t\tthrow e;\n\t\t});\n\t}\n\n\tvar ids = map[req], id = ids[0];\n\treturn __webpack_require__.e(ids[1]).then(() => {\n\t\treturn __webpack_require__(id);\n\t});\n}\nwebpackAsyncContext.keys = () => (Object.keys(map));\nwebpackAsyncContext.id = \"./src/assets/images lazy recursive ^\\\\.\\\\/.*\\\\.png$\";\nmodule.exports = webpackAsyncContext;\n\n//# sourceURL=webpack://the-league/./src/assets/images/_lazy_^\\.\\/.*\\.png$_namespace_object?");
+
 /***/ })
 
 /******/ 	});
@@ -1694,6 +1704,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -1719,6 +1732,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/ensure chunk */
+/******/ 	(() => {
+/******/ 		__webpack_require__.f = {};
+/******/ 		// This file contains only the entry chunk.
+/******/ 		// The chunk loading function for additional chunks
+/******/ 		__webpack_require__.e = (chunkId) => {
+/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
+/******/ 				__webpack_require__.f[key](chunkId, promises);
+/******/ 				return promises;
+/******/ 			}, []));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get javascript chunk filename */
+/******/ 	(() => {
+/******/ 		// This function allow to reference async chunks
+/******/ 		__webpack_require__.u = (chunkId) => {
+/******/ 			// return url for filenames based on template
+/******/ 			return "" + chunkId + ".index.bundle.js";
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -1734,6 +1769,52 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/load script */
+/******/ 	(() => {
+/******/ 		var inProgress = {};
+/******/ 		var dataWebpackPrefix = "the-league:";
+/******/ 		// loadScript function to load a script via script tag
+/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
+/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
+/******/ 			var script, needAttach;
+/******/ 			if(key !== undefined) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				for(var i = 0; i < scripts.length; i++) {
+/******/ 					var s = scripts[i];
+/******/ 					if(s.getAttribute("src") == url || s.getAttribute("data-webpack") == dataWebpackPrefix + key) { script = s; break; }
+/******/ 				}
+/******/ 			}
+/******/ 			if(!script) {
+/******/ 				needAttach = true;
+/******/ 				script = document.createElement('script');
+/******/ 		
+/******/ 				script.charset = 'utf-8';
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
+/******/ 				}
+/******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
+/******/ 				script.src = url;
+/******/ 			}
+/******/ 			inProgress[url] = [done];
+/******/ 			var onScriptComplete = (prev, event) => {
+/******/ 				// avoid mem leaks in IE.
+/******/ 				script.onerror = script.onload = null;
+/******/ 				clearTimeout(timeout);
+/******/ 				var doneFns = inProgress[url];
+/******/ 				delete inProgress[url];
+/******/ 				script.parentNode && script.parentNode.removeChild(script);
+/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
+/******/ 				if(prev) return prev(event);
+/******/ 			}
+/******/ 			;
+/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
+/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
+/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
+/******/ 			needAttach && document.head.appendChild(script);
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -1754,6 +1835,99 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/";
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
+/******/ 				// JSONP chunk loading for javascript
+/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
+/******/ 		
+/******/ 					// a Promise means "currently loading".
+/******/ 					if(installedChunkData) {
+/******/ 						promises.push(installedChunkData[2]);
+/******/ 					} else {
+/******/ 						if(true) { // all chunks have JS
+/******/ 							// setup Promise in chunk cache
+/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
+/******/ 							promises.push(installedChunkData[2] = promise);
+/******/ 		
+/******/ 							// start chunk loading
+/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
+/******/ 							// create error before stack unwound to get useful stacktrace later
+/******/ 							var error = new Error();
+/******/ 							var loadingEnded = (event) => {
+/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
+/******/ 									installedChunkData = installedChunks[chunkId];
+/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
+/******/ 									if(installedChunkData) {
+/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 										var realSrc = event && event.target && event.target.src;
+/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 										error.name = 'ChunkLoadError';
+/******/ 										error.type = errorType;
+/******/ 										error.request = realSrc;
+/******/ 										installedChunkData[1](error);
+/******/ 									}
+/******/ 								}
+/******/ 							};
+/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
+/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 					}
+/******/ 				}
+/******/ 		};
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			for(moduleId in moreModules) {
+/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 				}
+/******/ 			}
+/******/ 			if(runtime) var result = runtime(__webpack_require__);
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 			}
+/******/ 		
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkthe_league"] = self["webpackChunkthe_league"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
 /******/ 	
 /************************************************************************/
