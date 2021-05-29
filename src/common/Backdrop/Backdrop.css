@@ -1,0 +1,15 @@
+.hide {
+    z-index: -1;
+    background-color: transparent;
+    position: static;
+    transition: all 0.5s ease;
+}
+.show {
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0rem;
+    right: 0rem;
+    top: 0rem;
+    bottom: 0rem;
+}

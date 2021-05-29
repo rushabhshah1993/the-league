@@ -1,0 +1,119 @@
+@import './../../../utilities/mixins';
+
+.fighterImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.fighterSection {
+    display: flex;
+    align-items: center;
+}
+
+.fighterRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vsText {
+    display: flex;
+    align-items: center;
+}
+
+.allFightsSection p {
+    margin-bottom: 1rem;
+}
+
+.allFightsRow {
+    display: grid;
+    grid-template-columns: 60% 10% 28%;
+    margin-bottom: 32px;
+    column-gap: 2%;
+    border-bottom: 1px solid #EAEAEA;
+
+    @include for-phone-only {
+        grid-template-columns: 100%;
+    }
+
+    .roundName {
+        @include for-phone-only {
+            border-left: none;
+        }
+    }
+
+    .fighterRow {
+        @include for-phone-only {
+            display: grid;
+            grid-template-columns: 45% 10% 45%;
+        }
+
+        .vsText {
+            @include for-phone-only {
+                justify-content: center;
+            }
+        }
+
+        .fighterSection:last-child {
+            @include for-phone-only {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.roundName, .result {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.result {
+    font-size: 12px;
+}
+
+.roundName {
+    color: #9b9b9b;
+    font-size: 14px;
+    border-left: 1px solid #EAEAEA;
+}
+
+.win {
+    color: #28A745;
+}
+
+.lost {
+    color: #DC3545;
+}
+
+.nextFightSection {
+    margin-bottom: 32px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #9b9b9b;
+
+    p {
+        margin-bottom: 16px;
+    }
+
+    .fighterRow {
+
+        .vsText {
+            @include for-phone-only {
+                margin-right: 1rem;
+            }
+        }
+
+        .fighterSection {
+            @include for-phone-only {
+                &:last-child span {
+                    order: 1;
+                    text-align: right;
+                }
+
+                &:last-child img {
+                    order: 2;
+                }
+            }
+        }
+    }
+}

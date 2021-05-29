@@ -1,0 +1,49 @@
+@import './../../utilities/mixins';
+
+.divisionTableContainer {
+    height: 80vh;
+    overflow-y: auto;
+
+    @include for-phone-only {
+        height: 100%;
+        overflow: unset;
+        border-bottom: 1px solid #EAEAEA;
+    }
+
+    .fighterInfo {
+        display: flex;
+        align-items: center;
+
+        .imageCropper {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 1px solid #EAEAEA;
+            margin-right: 8px;
+        }
+
+        .fighterImg {
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+            display: inline;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 1rem;
+
+        th {
+            text-transform: capitalize;
+            text-align: left;
+        }
+
+        th, td {
+            margin-right: 32px;
+        }
+    }
+}

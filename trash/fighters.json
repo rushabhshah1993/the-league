@@ -1,0 +1,2048 @@
+{
+    "data": {
+        "F001": {
+            "age": 25,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Aashna",
+            "lastName": "Jogani",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F008",
+                    "result": false
+                },
+                "round10": {
+                    "fighter": "F019",
+                    "result": false
+                },
+                "round11": {
+                    "fighter": "F003",
+                    "result": false
+                },
+                "round12": {
+                    "fighter": "F036",
+                    "result": false
+                },
+                "round13": {
+                    "fighter": "F038",
+                    "result": false
+                },
+                "round14": {
+                    "fighter": "F032",
+                    "result": false
+                },
+                "round15": {
+                    "fighter": "F025",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F007",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F013",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F006",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F012",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F037",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F031",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F022",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F011",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F002": {
+            "age": 26,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Aishwarya",
+            "lastName": "Sharma",
+            "location": {
+                "city": "Navi Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F034",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F016",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F035",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F028",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F020",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F030",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F010",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 6.1,
+                    "punch": 6.0
+                },
+                "ss": {
+                    "abm": 7.23,
+                    "accuracy": 53,
+                    "lpm": 5.89
+                }
+            }
+        },
+        "F003": {
+            "age": 24,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Amruta",
+            "lastName": "Date",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F004": {
+            "age": 28,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Anika",
+            "lastName": "Beri",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F005": {
+            "age": 28,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Anmol",
+            "lastName": "Pandya",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F020",
+                    "result": "lost"
+                },
+                "round2": {
+                    "fighter": "F035",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F028",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F005",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F034",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F016",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 6.1,
+                    "punch": 6.2
+                },
+                "ss": {
+                    "abm": 4.96,
+                    "accuracy": 65,
+                    "lpm": 6.85
+                }
+            }
+        },
+        "F006": {
+            "age": 29,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Ashwini",
+            "lastName": "Date",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F007": {
+            "age": 28,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Darshita",
+            "lastName": "Bhatt",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F008": {
+            "age": 30,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Diana",
+            "lastName": "Chan",
+            "location": {
+                "city": "Sydney",
+                "country": "Australia"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F009": {
+            "age": 29,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Drishti",
+            "lastName": "Valecha",
+            "location": {
+                "city": "London",
+                "country": "United Kingdom"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F010": {
+            "age": 27,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Hetal",
+            "lastName": "Boricha",
+            "location": {
+                "city": "Pittsburgh",
+                "country": "United States"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F028",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F020",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F030",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F005",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F034",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F016",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F035",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F002",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 6.5,
+                    "punch": 6.81
+                },
+                "ss": {
+                    "abm": 6.23,
+                    "accuracy": 55,
+                    "lpm": 4.75
+                }
+            }
+        },
+        "F0011": {
+            "age": 28,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Hinal",
+            "lastName": "Parekh",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F0012": {
+            "age": 29,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Isha",
+            "lastName": "Haria",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F0013": {
+            "age": 28,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Jacqueline",
+            "lastName": "Furtado",
+            "location": {
+                "city": "Michigan",
+                "country": "United States"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F0014": {
+            "age": 28,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Jinali",
+            "lastName": "Shah",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F0015": {
+            "age": 28,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Kinjal",
+            "lastName": "Solanki",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F030",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F010",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F034",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F016",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F035",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F028",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F005",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F020",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 5.78,
+                    "punch": 5.97
+                },
+                "ss": {
+                    "abm": 7.13,
+                    "accuracy": 56,
+                    "lpm": 4.95
+                }
+            }
+        },
+        "F0016": {
+            "age": 28,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Komal",
+            "lastName": "Madamwar",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F035",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F028",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F020",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F030",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F010",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F034",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F005",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 5.6,
+                    "punch": 5.7
+                },
+                "ss": {
+                    "abm": 7.23,
+                    "accuracy": 49,
+                    "lpm": 4.98
+                }
+            }
+        },
+        "F0017": {
+            "age": 28,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Kripa",
+            "lastName": "Jalan",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F018": {
+            "age": 25,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Krishi",
+            "lastName": "Punamiya",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F019": {
+            "age": 25,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Kriti",
+            "lastName": "Kapoor",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F020": {
+            "age": 29,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Mahima",
+            "lastName": "Thakur",
+            "location": {
+                "city": "Shimla",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F005",
+                    "result": "win"
+                },
+                "round2": {
+                    "fighter": "F030",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F010",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F034",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F016",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F035",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F028",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F015",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 30,
+                        "strike": 41
+                    },
+                    "legs": {
+                        "absorb": 25,
+                        "strike": 16
+                    },
+                    "torso": {
+                        "absorb": 45,
+                        "strike": 41
+                    }
+                },
+                "power": {
+                    "kick": 7.2,
+                    "punch": 6.1
+                },
+                "ss": {
+                    "abm": 6.23,
+                    "accuracy": 51,
+                    "lpm": 4.51
+                }
+            }
+        },
+        "F021": {
+            "age": 29,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Mhafrin",
+            "lastName": "Basta",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F022": {
+            "age": 28,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Mridula",
+            "lastName": "Jadhav",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F023": {
+            "age": 29,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Natasha",
+            "lastName": "Arez",
+            "location": {
+                "city": "Toronto",
+                "country": "Canada"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F024": {
+            "age": 28,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Neha",
+            "lastName": "Gupta",
+            "location": {
+                "city": "New York City",
+                "country": "United States"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F025": {
+            "age": 25,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Priyanka",
+            "lastName": "Gandhi",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F026": {
+            "age": 29,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Rashna",
+            "lastName": "Irani",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F027": {
+            "age": 31,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Roopanshi",
+            "lastName": "Bhatt",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F028": {
+            "age": 26,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Rushika",
+            "lastName": "Mangrola",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F010",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F034",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F016",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F005",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F010",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F020",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F030",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 7.9,
+                    "punch": 6.96
+                },
+                "ss": {
+                    "abm": 7.16,
+                    "accuracy": 71,
+                    "lpm": 6.95
+                }
+            }
+        },
+        "F029": {
+            "age": 31,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Sachi",
+            "lastName": "Maker",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F030": {
+            "age": 28,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Sayali",
+            "lastName": "Raut",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F020",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F005",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F010",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F034",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F016",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F035",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F028",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 6.5,
+                    "punch": 7.2
+                },
+                "ss": {
+                    "abm": 5.41,
+                    "accuracy": 61,
+                    "lpm": 6.12
+                }
+            }
+        },
+        "F031": {
+            "age": 31,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Shraddha",
+            "lastName": "Bhansali",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F032": {
+            "age": 27,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Tanvi",
+            "lastName": "Shah",
+            "location": {
+                "city": "Washington DC",
+                "country": "United States"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F033": {
+            "age": 27,
+            "division": 2,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Trishala",
+            "lastName": "Sharma",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F034": {
+            "age": 29,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Unnati",
+            "lastName": "Vora",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F028",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F020",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F030",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F010",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F005",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F016",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F035",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 7.2,
+                    "punch": 6.98
+                },
+                "ss": {
+                    "abm": 4.73,
+                    "accuracy": 63,
+                    "lpm": 6.23
+                }
+            }
+        },
+        "F035": {
+            "age": 25,
+            "division": 1,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Venessa",
+            "lastName": "Arez",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "round1": {
+                    "fighter": "F016",
+                    "result": false
+                },
+                "round2": {
+                    "fighter": "F005",
+                    "result": false
+                },
+                "round3": {
+                    "fighter": "F002",
+                    "result": false
+                },
+                "round4": {
+                    "fighter": "F028",
+                    "result": false
+                },
+                "round5": {
+                    "fighter": "F015",
+                    "result": false
+                },
+                "round6": {
+                    "fighter": "F020",
+                    "result": false
+                },
+                "round7": {
+                    "fighter": "F030",
+                    "result": false
+                },
+                "round8": {
+                    "fighter": "F010",
+                    "result": false
+                },
+                "round9": {
+                    "fighter": "F034",
+                    "result": false
+                }
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 6.9,
+                    "punch": 8.93
+                },
+                "ss": {
+                    "abm": 7.83,
+                    "accuracy": 83,
+                    "lpm": 7.05
+                }
+            }
+        },
+        "F036": {
+            "age": 28,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Vidhi",
+            "lastName": "Parmar",
+            "location": {
+                "city": "Mumbai",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F037": {
+            "age": 28,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Vinaya",
+            "lastName": "Rao",
+            "location": {
+                "city": "Cincinnati",
+                "country": "United States"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        },
+        "F038": {
+            "age": 29,
+            "division": 3,
+            "fights": {
+                "total": 0,
+                "winPercent": 0,
+                "won": 0
+            },
+            "firstName": "Yashada",
+            "lastName": "Sharma",
+            "location": {
+                "city": "Pune",
+                "country": "India"
+            },
+            "rounds": {
+                "note": "Soon"
+            },
+            "stats": {
+                "positions": {
+                    "head": {
+                        "absorb": 55,
+                        "strike": 30
+                    },
+                    "legs": {
+                        "absorb": 10,
+                        "strike": 15
+                    },
+                    "torso": {
+                        "absorb": 35,
+                        "strike": 55
+                    }
+                },
+                "power": {
+                    "kick": 4.5,
+                    "punch": 3.7
+                },
+                "ss": {
+                    "abm": 9.23,
+                    "accuracy": 35,
+                    "lpm": 3.05
+                }
+            }
+        }
+    }
+    
+}

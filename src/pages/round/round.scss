@@ -1,0 +1,116 @@
+@import './../../utilities/mixins';
+
+.roundPageContainer {  
+    .titleContainer { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .pageTitle {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .link {
+            color: #17A2B8;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+
+    .roundNames {
+        display: flex;
+        margin-left: 15%;
+        justify-content: space-between;
+        padding: 15px;
+
+        @include for-phone-only {
+            margin-left: 40%;
+            width: 60%;
+            overflow-x: auto;
+            display: none;
+        }
+    }
+    
+    .roundContainer {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        height: 75vh;
+        overflow-y: auto;
+        border-bottom: 1px solid #EAEAEA;
+
+        @include for-phone-only {
+            grid-template-columns: 40% 60%;
+        }
+        
+        .fighterImg {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+        }
+        
+        .fighterRow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 32px;
+            // margin-right: 32px;
+        }
+        
+        .roundRow {
+            // display: grid;
+            // grid-template-columns: repeat(auto-fill, 100px);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hideFighterName {
+            display: none;
+        }
+
+        .won {
+            border: 1px solid #28A745;
+            background: #28A74533;
+        }
+        
+        .wonCurrent {
+            border: 1px solid #28A745 !important;
+        }
+
+        .lost {
+            border: 1px solid #DC3545;
+            background: #DC354533;
+        }
+        
+        .lostCurrent {
+            border: 1px solid #DC3545 !important;
+        }
+
+        .currentRound {
+            border: 1px solid #FFC107;
+            background: #FFC10733;
+        }
+
+        .mainFightersCol {
+            display: flex;
+            flex-direction: column;
+
+            .mainFighterInfo {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+                border-right: 1px solid #EAEAEA;
+
+            }
+        }
+
+        .fighterRoundsContainer {
+            padding: 0 16px;
+
+            @include for-phone-only {
+                overflow-x: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "./../../utilities/variables";
+@import './../../utilities/mixins';
+
+.navbarContainer {
+    color: $text-color;
+    margin-bottom: 16px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-phone-only {
+        flex-direction: column;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    p.title {
+        font-size: 32px;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    .navSection {
+        display: flex;
+
+        a {
+            text-decoration: none;
+        }
+
+        .navBtn {
+            padding: 8px;
+            border-right: 1px solid #EAEAEA;
+        }
+
+        .navBtn:last-child {
+            margin-right: 0;
+            border-right: none;
+        }
+
+        .activeNavItem {
+            border-bottom: 1px solid #9B9B9B;
+        }
+    }
+}

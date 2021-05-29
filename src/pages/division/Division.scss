@@ -1,0 +1,44 @@
+@import './../../utilities/mixins';
+
+.divisionContainer {
+    p.title {
+        margin: 0;
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+
+    @include for-phone-only {
+        height: calc(100vh - 120px);
+        position: relative;
+    }
+
+    .divisionContent {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        column-gap: 10%;
+
+        @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 50px);
+            row-gap: 2rem;
+        }
+
+        .divisionTableWrapper {
+            @include for-phone-only {
+                order: 2;
+                height: 45%;
+                overflow-y: auto;
+            }
+        }
+
+        .divisionRoundWrapper {
+            @include for-phone-only {
+                order: 1;
+                height: 45%;
+                overflow-y: auto;
+                border-bottom: 1px solid #EAEAEA;
+            }
+        }
+    }
+}

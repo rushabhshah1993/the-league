@@ -1,0 +1,90 @@
+@import './../../utilities/mixins';
+
+.divisionRoundContainer {
+    .fighterImg {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid #EAEAEA;
+        margin-right: 8px;
+    }
+
+    .roundInfo {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        .viewRounds {
+            color: #33B5E5;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    }
+
+    .roundContent {
+        .roundFightContainer {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #EAEAEA;
+
+            @include for-phone-only {
+                grid-template-columns: 80% 20%;
+            }
+
+            .roundFight {
+                display: grid;
+                grid-template-columns: 40% 20% 40%;
+                border-right: 1px solid #EAEAEA;
+
+                .roundFighter {
+                    display: flex;
+
+                    img {
+                        @include for-phone-only {
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+                }
+
+                .vsText {
+                    text-align: center;
+                }
+
+                .fighter2 {
+                    justify-content: flex-end;
+                    padding-right: 8px;
+
+                    img {
+                        order: 2;
+                        margin: 0;
+                    }
+
+                    p {
+                        order: 1;
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            .actionBtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .winner {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .chooseWinner {
+                    color: #33B5E5;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

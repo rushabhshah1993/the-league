@@ -1,0 +1,14 @@
+@import './../../utilities/mixins';
+
+.divisionsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+
+    @include for-phone-only {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+}
+

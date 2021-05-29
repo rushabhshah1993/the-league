@@ -1,0 +1,69 @@
+@import './../../utilities/mixins';
+
+.chooseWinnerContainer {
+    .fightersContainer {
+        display: flex;
+        margin-bottom: 16px;
+
+        .orText {
+            align-self: center;
+            margin: 0 2rem;
+        }
+
+        .fighter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .fighterImg {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                border: 3px solid #EAEAEA;
+                background: #000000;
+                opacity: .8;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                @include for-phone-only {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+
+            .choosenFighter{
+                border: 3px solid #28A745;
+                opacity: 1;
+            }
+        }
+    }
+
+    .winnerFooter {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @include for-phone-only {
+            flex-direction: column;
+        }
+
+        .button {
+            border: 1px solid #EAEAEA;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                background: #28A745;
+                border: 1px solid #28A745;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

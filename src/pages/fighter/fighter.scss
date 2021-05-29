@@ -1,0 +1,206 @@
+@import './../../utilities/mixins';
+@import './../../utilities/variables';
+
+.fighterContainer {
+    p {
+        margin: 0;
+    }
+
+    .header { 
+        display: flex;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #EAEAEA;
+
+        @include for-phone-only {
+            flex-direction: column;
+            align-items: center;
+            height: calc(100vh - 120px);
+        }
+
+        .fighterImg {
+            // height: 100%;
+            height: initial;
+            width: 200px;
+            border-radius: 50%;
+            margin-right: 32px;
+
+            @include for-phone-only {
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+
+        .fighterInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            flex-grow: 1;
+
+            .fighterName {
+                font-size: 80px;
+
+                @include for-phone-only {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+            }
+
+            .fighterLocation {
+                margin-bottom: 8px;
+                font-size: 20px;
+            }
+
+            .division {
+                border: 1px solid #9b9b9b;
+                border-radius: 12px;
+                width: fit-content;
+                padding: 6px;
+            }
+
+            .statsAndInfo {
+                display: flex;
+                justify-content: space-between;
+
+                @include for-phone-only {
+                    flex-direction: column;
+                }
+
+                .fighterLocationDivision {
+                    @include for-phone-only {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 2rem;
+                    }
+
+                    .fighterLocation {
+                        @include for-phone-only {
+                            font-size: 16px;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .division {
+                        @include for-phone-only {
+                            padding: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+
+            .fightStats {
+                display: flex;
+
+                @include for-phone-only {
+                    justify-content: space-between;
+                }
+
+                .statItem {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-right: 32px;
+
+                    label {
+                        font-size: 12px;
+                        color: #9b9b9b;
+                    }
+
+                    span {
+                        font-size: 32px;
+                        text-align: right;
+                    }
+
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs {
+        display: none;
+
+        @include for-phone-only {
+            display: flex;
+            justify-content: center;
+            column-gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .tabItem {
+            border: 1px solid #EAEAEA;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .activeTab {
+            background: $primary-color;
+            color: #FFFFFF;
+        }
+    }
+
+    .fighterContent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);   
+        
+        @include for-phone-only {
+            display: flex;
+        }
+
+        .stats {
+            border-right: 1px solid #EAEAEA;
+
+            @include for-phone-only {
+                border-right: none;
+            }
+        }
+        
+        .stats, .fights {
+            padding-top: 16px;
+            height: 60vh;
+            overflow-y: auto;
+
+            @include for-phone-only {
+                height: 80vh;
+            }
+        }
+
+        .sectionTitle {
+            font-size: 24px;
+            margin-bottom: 16px;
+
+            @include for-phone-only {
+                display: none;
+            }
+        }
+
+        .fights {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .charts {
+            display: flex;
+            border-bottom: 1px solid #EAEAEA;
+
+            @include for-phone-only {
+                flex-direction: column;
+            }
+        }
+
+        .statSection {
+            margin-bottom: 16px;
+
+            label {
+                font-size: 18px;
+                margin-right: 16px;
+            }
+        }
+    }
+}

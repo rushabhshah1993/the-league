@@ -1,0 +1,110 @@
+@import './../../utilities/mixins';
+
+.fightersContainer {
+    .slantBG {
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+        background-color: #7b4fe7;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .titleSection {
+        margin-bottom: 16px;
+
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    .fightersContent {
+        .tabContainer {
+            display: flex;
+            margin-bottom: 16px;
+
+            @include for-phone-only {
+                justify-content: center;
+            }
+
+            .tabBtn {
+                margin-right: 16px;
+                padding: 8px;
+                border: 1px solid #EAEAEA;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    color: #FFFFFF;
+                    background: #7F0799;
+                }
+            }
+        }
+
+        .fighterCardsContainer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 4rem;
+            row-gap: 32px;
+            height: 75vh;
+            overflow-y: auto;
+
+            @include for-phone-only {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .fighterCard {
+                border: 1px solid #EAEAEA;
+                border-radius: 4px;
+                position: relative;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                cursor: pointer;
+
+                .fighterCardContent {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    z-index: 999;
+
+                    .fighterImgContainer {
+                        .fighterImg {
+                            width: 200px;
+                            height: 200px;
+
+                            @include for-phone-only {
+                                width: 150px;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    .fighterInfo {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 16px 8px;
+
+                        .fighterName {
+                            color: #FFFFFF;
+                            font-size: 32px;
+
+                            @include for-phone-only {
+                                font-size: 24px;
+                                margin-top: 1rem;
+                            }
+
+                            p {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

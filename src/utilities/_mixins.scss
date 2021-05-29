@@ -1,0 +1,11 @@
+@import './variables';
+
+@mixin for-phone-only {
+    @media screen and (max-width: $mobile-max-width) { @content; }
+}
+
+@mixin for-tabs-portrait {
+    @media screen and 
+    (min-width: $tab-min-width) and 
+    (max-width: $tab-max-width) { @content;}
+}

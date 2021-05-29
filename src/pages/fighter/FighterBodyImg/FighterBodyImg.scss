@@ -1,0 +1,46 @@
+@import './../../../utilities/mixins';
+
+.fighterBodyImgContainer {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include for-phone-only {
+        flex-direction: column;
+    }
+
+    .imgStatContainer {
+        @include for-phone-only {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #EAEAEA;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        p {
+            @include for-phone-only {
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.svgDiv {
+    height: 200px;
+    width: 200px;
+    display: flex;
+
+    @include for-phone-only {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+.textElement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
