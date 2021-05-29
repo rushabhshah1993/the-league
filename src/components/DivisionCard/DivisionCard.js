@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
@@ -13,8 +13,17 @@ const DivisionCard = props => {
         let leader = props.fighters[props.division.leader];
         let imgPath = `./../../assets/images/${leader.firstName} ${leader.lastName}.png`;
         setLeader(leader);
-        setImgPath(imgPath);
+        // setImgPath(imgPath);
     }
+    
+    useEffect(() => {
+        if(imgPath === null && leader !== null) {
+            import(`./../../assets/images/${leader.firstName} ${leader.lastName}.png`).then(response => {
+                console.log(response.default);
+                setImgPath(response.default);
+            })
+        }
+    }, [leader]);
 
     const navigateToDivision = () => {
         history.push(`/divisions/${props.division.id}`);
