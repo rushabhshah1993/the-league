@@ -41,7 +41,8 @@ const fighters = props => {
                 <div className={styles.fighterCardContent}>
                     <div className={styles.fighterImgContainer}>
                         <img 
-                            src={`./../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
+                            // src={`./../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
+                            src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]}
                             className={styles.fighterImg} />
                     </div>
                     <div className={styles.fighterInfo}>
@@ -74,7 +75,8 @@ const fighters = props => {
 const mapStateToProps = state => {
     return {
         fighters: state.fighters,
-        divisions: state.divisions
+        divisions: state.divisions,
+        fighterImgs: state.fighterImgs
     }
 }
 

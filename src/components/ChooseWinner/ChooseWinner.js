@@ -129,7 +129,8 @@ const ChooseWinner = props => {
             <div className={styles.fightersContainer}>
                 <div className={styles.fighter}>
                     <img 
-                        src={`./../../assets/images/${fighter1?.firstName} ${fighter1?.lastName}.png`}
+                        // src={`./../../assets/images/${fighter1?.firstName} ${fighter1?.lastName}.png`}
+                        src={props.fighterImgs[`${fighter1?.firstName} ${fighter1?.lastName}`] || null}
                         className={styles.fighterImg}
                         onClick={selectFighter} 
                         id={fighter1?.id} 
@@ -140,7 +141,8 @@ const ChooseWinner = props => {
                 <div className={styles.orText}>OR</div>
                 <div className={styles.fighter}>
                     <img 
-                        src={`./../../assets/images/${fighter2?.firstName} ${fighter2?.lastName}.png`}
+                        // src={`./../../assets/images/${fighter2?.firstName} ${fighter2?.lastName}.png`}
+                        src={props.fighterImgs[`${fighter2?.firstName} ${fighter2?.lastName}`] || null}
                         className={styles.fighterImg}
                         onClick={selectFighter} 
                         id={fighter2?.id} 

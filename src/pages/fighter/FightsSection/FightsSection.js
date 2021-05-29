@@ -28,14 +28,16 @@ const FightsSection = props => {
             <div className={styles.fighterRow}>
                 <div className={styles.fighterSection}>
                     <img 
-                        src={`./../../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
+                        // src={`./../../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
+                        src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]}
                         className={styles.fighterImg} />
                     <span className={styles.fighterName}>{fighter.firstName} {fighter.lastName}</span>
                 </div>
                 <div className={styles.vsText}>vs</div>
                 <div className={styles.fighterSection}>
                     <img 
-                        src={`./../../../assets/images/${nextFighter.firstName} ${nextFighter.lastName}.png`}
+                        // src={`./../../../assets/images/${nextFighter.firstName} ${nextFighter.lastName}.png`}
+                        src={props.fighterImgs[`${nextFighter.firstName} ${nextFighter.lastName}`]}
                         className={styles.fighterImg} />
                     <span className={styles.fighterName}>{nextFighter.firstName} {nextFighter.lastName}</span>
                 </div>
@@ -56,7 +58,8 @@ const FightsSection = props => {
                     <div className={styles.fighterRow}>
                         <div className={styles.fighterSection}>
                             <img 
-                                src={`./../../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
+                                // src={`./../../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
+                                src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]}
                                 className={styles.fighterImg} />
                             <span className={styles.fighterName}>{fighter.firstName} {fighter.lastName}</span>
                         </div>
@@ -64,7 +67,8 @@ const FightsSection = props => {
                         <div className={styles.fighterSection}>
                             <span className={styles.fighterName}>{opponent.firstName}</span>
                             <img 
-                                src={`./../../../assets/images/${opponent.firstName} ${opponent.lastName}.png`}
+                                // src={`./../../../assets/images/${opponent.firstName} ${opponent.lastName}.png`}
+                                src={props.fighterImgs[`${opponent.firstName} ${opponent.lastName}`]}
                                 className={styles.fighterImg} />
                         </div>
                     </div>
@@ -91,7 +95,8 @@ const FightsSection = props => {
 
 const mapStateToProps = state => {
     return {
-        fighters: state.fighters
+        fighters: state.fighters,
+        fighterImgs: state.fighterImgs
     }
 }
 

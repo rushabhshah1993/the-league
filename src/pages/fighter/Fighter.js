@@ -43,7 +43,8 @@ const Fighter = props => {
         content = (
             <div>
                 <div className={styles.header}>
-                    <img src={`./../../assets/images/${fullName}.png`} className={styles.fighterImg} />
+                    {/* <img src={`./../../assets/images/${fullName}.png`} className={styles.fighterImg} /> */}
+                    <img src={props.fighterImgs[`${fullName}`]} className={styles.fighterImg} />
                     <div className={styles.fighterInfo}>
                         <p className={styles.fighterName}>{fullName}</p>
                         <div className={styles.statsAndInfo}>
@@ -155,7 +156,8 @@ const Fighter = props => {
 
 const mapStateToProps = state => {
     return {
-        fighters: state.fighters
+        fighters: state.fighters,
+        fighterImgs: state.fighterImgs
     }
 }
 

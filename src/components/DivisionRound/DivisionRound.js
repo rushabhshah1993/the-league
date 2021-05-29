@@ -29,7 +29,9 @@ const DivisionRound = props => {
     }
     
     
-    if(currentRound.length > 0 && Object.keys(props.fighters).length > 0) {
+    if(currentRound.length > 0 
+        && Object.keys(props.fighters).length > 0 
+        && Object.keys(props.fighterImgs).length > 0) {
         let htmlElement = currentRound.map((fight, count) => {
             let fighter1 = props.fighters[fight.fighter1];
             let fighter2 = props.fighters[fight.fighter2];
@@ -40,14 +42,16 @@ const DivisionRound = props => {
                     <div className={styles.roundFight}>
                         <div className={styles.roundFighter}>
                             <img 
-                                src={`./../../assets/images/${fighter1.firstName} ${fighter1.lastName}.png`}
+                                // src={`./../../assets/images/${fighter1.firstName} ${fighter1.lastName}.png`}
+                                src={props.fighterImgs[`${fighter1.firstName} ${fighter1.lastName}`]}
                                 className={styles.fighterImg} />
                             <p>{fighter1.firstName}</p>
                         </div>
                         <p className={styles.vsText}>vs</p>
                         <div className={[styles.roundFighter, styles.fighter2].join(' ')}>
                             <img 
-                                src={`./../../assets/images/${fighter2.firstName} ${fighter2.lastName}.png`}
+                                // src={`./../../assets/images/${fighter2.firstName} ${fighter2.lastName}.png`}
+                                src={props.fighterImgs[`${fighter2.firstName} ${fighter2.lastName}`]}
                                 className={styles.fighterImg} />
                             <p>{fighter2.firstName}</p>
                         </div>
@@ -58,7 +62,8 @@ const DivisionRound = props => {
                             (
                                 <div className={styles.winner}>
                                     <img 
-                                        src={`./../../assets/images/${winner.firstName} ${winner.lastName}.png`}
+                                        // src={`./../../assets/images/${winner.firstName} ${winner.lastName}.png`}
+                                        src={props.fighterImgs[`${winner.firstName} ${winner.lastName}`]}
                                         className={styles.fighterImg} />
                                     <p>{winner.firstName}</p>
                                 </div>
@@ -129,7 +134,8 @@ const mapStateToProps = state => {
     return {
         rounds: state.rounds,
         fighters: state.fighters,
-        divisions: state.divisions
+        divisions: state.divisions,
+        fighterImgs: state.fighterImgs
     }
 }
 

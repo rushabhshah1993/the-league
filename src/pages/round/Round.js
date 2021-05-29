@@ -20,7 +20,8 @@ const round = props => {
             <div className={styles.mainFighterInfo} key={fighter.id}>
                 <img 
                     className={styles.fighterImg}
-                    src={`./../../assets/images/${fighter.firstName} ${fighter.lastName}.png`} />
+                    // src={`./../../assets/images/${fighter.firstName} ${fighter.lastName}.png`} />
+                    src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]} />
                 <span>{fighter.firstName} {fighter.lastName}</span>
             </div>
         )
@@ -73,7 +74,8 @@ const round = props => {
                     <img 
                         className={imgClassnames.join(' ')}
                         title={title}
-                        src={`./../../assets/images/${fighterFullName}.png`} />
+                        // src={`./../../assets/images/${fighterFullName}.png`} />
+                        src={props.fighterImgs[`${fighterFullName}`]} />
                 </div>
             )
         })
