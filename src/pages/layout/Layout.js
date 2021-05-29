@@ -21,7 +21,9 @@ import {
 import {
     fetchDivisionTable
 } from './../../actions/tableActions';
-import axios from 'axios';
+import {
+    updateFighterImgs
+} from './../../actions/fighterImgActions';
 
 const Layout = props => {
     useEffect(() => {
@@ -30,6 +32,22 @@ const Layout = props => {
         props.fetchRounds();
         props.fetchTableData();
     }, [])
+
+    useEffect(() => {
+        if(Object.keys(props.fighters).length > 0) {
+            let obj = {};
+            for(let fighterId in props.fighters) {
+                let fighter = props.fighters[fighterId];
+                let fighterName = `${fighter.firstName} ${fighter.lastName}`;
+                import(`./../../assets/images/${fighterName}.png`).then(response => {
+                    obj[fighterName] = response.default;
+                    if(Object.keys(obj).length === Object.keys(props.fighters).length) {
+                        props.updateFighterImgs(obj);
+                    }
+                })
+            }
+        }
+    }, [props.fighters])
 
     return (
         <div>
@@ -45,13 +63,20 @@ const Layout = props => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        fighters: state.fighters
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return {
         fetchDivisions: () => dispatch(fetchDivisionsData()),
         fetchFighters: () => dispatch(fetchFightersList()),
         fetchRounds: () => dispatch(fetchAllRounds()),
-        fetchTableData: () => dispatch(fetchDivisionTable())
+        fetchTableData: () => dispatch(fetchDivisionTable()),
+        updateFighterImgs: fighters => dispatch(updateFighterImgs(fighters))
     }
 }
 
-export default connect(null, mapDispatchToProps)(Layout);
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

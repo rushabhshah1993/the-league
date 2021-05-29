@@ -13,17 +13,14 @@ const DivisionCard = props => {
         let leader = props.fighters[props.division.leader];
         setLeader(leader);
     }
-    
-    useEffect(() => {
-        if(imgPath === null && leader !== null) {
-            let imgPath = `./../../assets/images/${leader.firstName} ${leader.lastName}.png`;
-            import(imgPath).then(response => {
-                console.log(response.default);
-                setImgPath(response.default);
-            })
-        }
-    }, [leader]);
 
+    useEffect(() => {
+        if(Object.keys(props.fighterImgs).length > 0) {
+            let imgPath = props.fighterImgs[`${leader.firstName} ${leader.lastName}`];
+            setImgPath(imgPath);
+        }    
+    }, [props.fighterImgs])
+    
     const navigateToDivision = () => {
         history.push(`/divisions/${props.division.id}`);
     }
@@ -51,7 +48,8 @@ const DivisionCard = props => {
 
 const mapStateToProps = state => {
     return {
-        fighters: state.fighters
+        fighters: state.fighters,
+        fighterImgs: state.fighterImgs
     }
 }
 
