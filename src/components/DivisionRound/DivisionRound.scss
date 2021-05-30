@@ -78,6 +78,19 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    img {
+                        @include for-phone-only {
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+
+                    p {
+                        @include for-phone-only {
+                            display: none;
+                        }
+                    }
                 }
 
                 .chooseWinner {
