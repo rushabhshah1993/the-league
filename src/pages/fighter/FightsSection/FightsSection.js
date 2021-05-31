@@ -4,11 +4,9 @@ import { connect } from 'react-redux';
 import styles from './FightsSection.scss';
 
 const FightsSection = props => {
-    console.log(props);
-    let nextFight, nextFightElement, allFightsElement;
+    let nextFight, nextFightElement, allFightsElement, lastFiveFightsElement;
     if(props.fights) {
         let fights = Object.keys(props.fights).sort((a, b) => {
-            console.log(a);
             return +a.split("round")[1] - +b.split("round")[1];
         }).reduce((result, key) => {
             result[key] = props.fights[key];
@@ -23,6 +21,31 @@ const FightsSection = props => {
 
         let fighter = props.fighters[props.fighterId];
         let nextFighter = props.fighters[nextFight.fighter];
+
+        let nextFighterFinishedFights = Object.keys(nextFighter.rounds)
+        .filter(round => nextFighter.rounds[round].result !== false)
+        .reduce((result, key) => {
+            nextFighter.rounds[key].round = key;
+            result.push(nextFighter.rounds[key]);
+            return result;
+          }, []);
+        let lastFiveFightsArr = nextFighterFinishedFights.slice(-5);
+        let lastFiveFightsDot = lastFiveFightsArr.map(fight => {
+            return (
+                <div 
+                    key={fight.round}
+                    title={`Round ${fight.round.slice(-1)}: ${fight.result} against ${props.fighters[fight.fighter].firstName}`}
+                    className={fight.result === "win" ? styles.winDot : styles.lostDot}></div>
+            )
+        })
+
+        lastFiveFightsElement = (
+            <div className={styles.nextFighterLastFive}>
+                <p>{nextFighter.firstName}'s performance:</p>
+                <div className={styles.lastFiveContainer}>{lastFiveFightsDot}</div>
+            </div>
+        )
+
 
         nextFightElement = (
             <div className={styles.fighterRow}>
@@ -84,6 +107,7 @@ const FightsSection = props => {
             <div className={styles.nextFightSection}>
                 <p>Next Fight</p>
                 { nextFightElement }
+                { lastFiveFightsElement }
             </div>
             <div className={styles.allFightsSection}>
                 <p>All Fights</p>

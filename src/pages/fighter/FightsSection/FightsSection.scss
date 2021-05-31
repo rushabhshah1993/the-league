@@ -114,6 +114,33 @@
                     order: 2;
                 }
             }
+
         }
+    }
+    .winDot, .lostDot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+    }
+    
+    .winDot {
+        background-color: green;
+    }
+
+    .lostDot {
+        background-color: red;
+    }
+    .lastFiveContainer {
+        display: flex;
+    }
+    .nextFighterLastFive {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: 8px;
+        justify-content: center;
+    }
+    .nextFighterLastFive p {
+        margin-bottom: 0;
     }
 }
