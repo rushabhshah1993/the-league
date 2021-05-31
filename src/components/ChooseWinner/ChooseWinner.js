@@ -30,7 +30,7 @@ const ChooseWinner = props => {
         let incompleteFights = props.rounds[divisionId][roundId].fights.filter(fight => fight.winner === false);
         let lastFightOfTheRound = incompleteFights.length === 1;
         let loserFighter = selectedFighter === fighter1.id ? fighter2.id : fighter1.id;
-        
+
         updateFighterData(selectedFighter, roundId);
         updateRoundsData(divisionId, roundId, props.fightId, selectedFighter);
         updateDivisionsData(divisionId, selectedFighter, roundId, lastFightOfTheRound);
@@ -99,7 +99,7 @@ const ChooseWinner = props => {
         props.table[divisionId][roundId][loserId] += 0;
         if(lastFightOfTheRound) {
             let nextRoundId = `round${+roundId.slice(-1) + 1}`;
-            props.table[divisionId][nextRoundId] = props.table[divisionId][currentRoundId];
+            props.table[divisionId][nextRoundId] = props.table[divisionId][roundId];
         }
         props.addRoundPointsToTable(props.table);
     }  
