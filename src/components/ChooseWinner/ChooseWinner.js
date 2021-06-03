@@ -25,7 +25,7 @@ const ChooseWinner = props => {
     const finaliseWinner = () => {
         let fightInfo = props.fightId.split("-");
         let divisionId = `division${fightInfo[0].slice(-1)}`;
-        let roundId = `round${fightInfo[1].slice(-1)}`;
+        let roundId = `round${fightInfo[1].split("R")[1]}`;
 
         let incompleteFights = props.rounds[divisionId][roundId].fights.filter(fight => fight.winner === false);
         let lastFightOfTheRound = incompleteFights.length === 1;
@@ -40,7 +40,7 @@ const ChooseWinner = props => {
     
     const updateFighterData = (fighterId, roundId) => {
         props.fighters[fighterId].rounds[roundId].result = "win";
-        props.fighters[fighterId].lastRoundGained = +roundId.slice(-1);
+        props.fighters[fighterId].lastRoundGained = +roundId.split("round")[1];
         props.fighters[fighterId].fights.total += 1;
         props.fighters[fighterId].fights.won += 1;
         props.fighters[fighterId].fights.winPercent = 
@@ -69,7 +69,8 @@ const ChooseWinner = props => {
         let roundComplete = roundFights.every(fight => fight.winner !== false);
         if(roundComplete) {
             currentDivision[roundId].current = false;
-            let nextRound = `round${+roundId.slice(-1) + 1}`;
+            // let nextRound = `round${+roundId.slice(-1) + 1}`;
+            let nextRound = `round${+roundId.split("round")[1] + 1}`;
             if(currentDivision[nextRound] === undefined) {
                 console.log("Division over");
             } else {
@@ -84,7 +85,8 @@ const ChooseWinner = props => {
         let pointsData = props.divisions[divisionId].points;
         pointsData[fighterId] += 3;
         if(lastFightOfTheRound) {
-            props.divisions[divisionId].currentRound = +roundId.slice(-1) + 1;
+            // props.divisions[divisionId].currentRound = +roundId.slice(-1) + 1;
+            props.divisions[divisionId].currentRound = +roundId.split("round")[1] + 1;
         }
 
         props.addDivisionPoints(props.divisions);
@@ -98,7 +100,8 @@ const ChooseWinner = props => {
         props.table[divisionId][roundId][winnerId] += 3;
         props.table[divisionId][roundId][loserId] += 0;
         if(lastFightOfTheRound) {
-            let nextRoundId = `round${+roundId.slice(-1) + 1}`;
+            // let nextRoundId = `round${+roundId.slice(-1) + 1}`;
+            let nextRoundId = `round${+roundId.split("round")[1] + 1}`;
             props.table[divisionId][nextRoundId] = props.table[divisionId][roundId];
         }
         props.addRoundPointsToTable(props.table);
