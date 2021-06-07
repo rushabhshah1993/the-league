@@ -62,7 +62,10 @@ const ChooseWinner = props => {
     const updateRoundsData = (divisionId, roundId, fightId, winnerId) => {
         const currentDivision = props.rounds[divisionId]; 
         let roundFights = currentDivision[roundId].fights.map(fight => {
-            if(fight.id === fightId) fight.winner = winnerId;
+            if(fight.id === fightId) {
+                fight.winner = winnerId;
+                fight.date = new Date().toISOString();
+            }
             return fight;
         })
         currentDivision[roundId].fights = roundFights;
