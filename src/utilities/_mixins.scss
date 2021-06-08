@@ -9,3 +9,8 @@
     (min-width: $tab-min-width) and 
     (max-width: $tab-max-width) { @content;}
 }
+
+@mixin sectionTitle {
+    font-size: 1.5rem;
+    color: $text-color;
+}

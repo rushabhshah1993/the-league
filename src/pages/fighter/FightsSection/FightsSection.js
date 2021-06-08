@@ -29,7 +29,11 @@ const FightsSection = props => {
             result.push(nextFighter.rounds[key]);
             return result;
           }, []);
+        nextFighterFinishedFights.sort((a, b) => {
+            return +a.round.split("round")[1] - +b.round.split("round")[1];
+        })
         let lastFiveFightsArr = nextFighterFinishedFights.slice(-5);
+
         let lastFiveFightsDot = lastFiveFightsArr.map(fight => {
             return (
                 <div 

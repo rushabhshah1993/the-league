@@ -2,6 +2,28 @@
 @import './../../utilities/variables';
 
 .nextFightsContainer {
+    .winDot, .lostDot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+
+        @include for-phone-only {
+            margin-bottom: 2rem;
+        }
+    }
+    
+    .winDot {
+        background-color: green;
+    }
+
+    .lostDot {
+        background-color: red;
+    }
+
+    .lastFights {
+        display: flex;
+    }
+
     .title {
         font-size: 1.5rem;
     }
@@ -9,6 +31,18 @@
     .divisionContainer {
         .fight {
             display: flex;
+            justify-content: space-between;
+
+            .fighterContainer {
+                display: flex;
+                align-items: center;
+
+                &:last-child {
+                    .lastFights {
+                        justify-content: flex-end;
+                    }
+                }
+            }
 
             .fighterImg {
                 width: 50px;

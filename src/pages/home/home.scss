@@ -1,3 +1,5 @@
+@import './../../utilities/mixins';
+
 .homeContainer {
     height: 100%;
 
@@ -8,6 +10,11 @@
             margin-top: 2rem;
             display: grid;
             grid-template-columns: 60% 40%;
+
+            @include for-phone-only {
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
 }

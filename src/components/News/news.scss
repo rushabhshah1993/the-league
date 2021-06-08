@@ -1,0 +1,12 @@
+@import './../../utilities/mixins';
+@import './../../utilities/variables';
+
+.newsContainer {
+    @include for-phone-only {
+        order: 2;
+    }
+    
+    .title {
+        @include sectionTitle;
+    }
+}
