@@ -24,6 +24,9 @@ import {
 import {
     updateFighterImgs
 } from './../../actions/fighterImgActions';
+import {
+    fetchNews
+} from './../../actions/newsActions';
 
 const Layout = props => {
     useEffect(() => {
@@ -31,6 +34,7 @@ const Layout = props => {
         props.fetchFighters();
         props.fetchRounds();
         props.fetchTableData();
+        props.fetchNews();
     }, [])
 
     useEffect(() => {
@@ -75,6 +79,7 @@ const mapDispatchToProps = dispatch => {
         fetchFighters: () => dispatch(fetchFightersList()),
         fetchRounds: () => dispatch(fetchAllRounds()),
         fetchTableData: () => dispatch(fetchDivisionTable()),
+        fetchNews: () => dispatch(fetchNews()),
         updateFighterImgs: fighters => dispatch(updateFighterImgs(fighters))
     }
 }

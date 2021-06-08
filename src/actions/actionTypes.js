@@ -12,3 +12,5 @@ export const SET_ROUNDS_LIST = "SET_ROUNDS_LIST";
 export const SET_ROUND_RESULT = "SET_ROUND_RESULT";
 
 export const UPDATE_FIGHTER_IMGS = "UPDATE_FIGHTER_IMGS";
+
+export const SET_NEWS = "SET_NEWS";

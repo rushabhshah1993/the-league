@@ -9,7 +9,8 @@
         .section {
             margin-top: 2rem;
             display: grid;
-            grid-template-columns: 60% 40%;
+            grid-template-columns: 57% 37%;
+            column-gap: 6%;
 
             @include for-phone-only {
                 display: flex;
