@@ -3,5 +3,11 @@
 
     .homeContent {
         height: calc(100% - 4rem);
+
+        .section {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 60% 40%;
+        }
     }
 }
