@@ -38,7 +38,11 @@ const News = props => {
         <div className={styles.newsContainer}>
             <div className={styles.newsHeader}>
                 <p className={styles.title}>News</p>
-                <span className={styles.viewAll}>View all articles</span>
+                <span 
+                    className={styles.viewAll}
+                    onClick={() =>  props.history.push('/articles')}>
+                    View all articles
+                </span>
             </div>
             {/* <p>Coming Soon...</p> */}
             <div className={styles.articlesContainer}>

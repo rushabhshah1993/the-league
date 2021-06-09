@@ -30,6 +30,15 @@
 
         .articleBody {
             padding-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+        }
+
+        .viewAll {
+            color: #007BFF;
+            cursor: pointer;
+            margin-top: 8px;
         }
     }
 }

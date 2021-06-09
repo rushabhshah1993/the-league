@@ -1,0 +1,107 @@
+@import './../../utilities/mixins';
+@import './../../utilities/variables';
+
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    @include for-phone-only {
+        justify-content: flex-start;
+    }
+
+    span {
+        margin-right: 8px;
+    }
+
+    .filterItems {
+        display: flex;
+        column-gap: 4px;
+
+        .filterItem {
+            border: 1px solid #EAEAEA;
+            border-radius: 8px;
+            padding: 8px;
+            cursor: pointer;
+
+            &.active {
+                background-color: $primary-color;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.articleContainer {
+    display: grid;
+    grid-template-columns: 28% 68%;
+    column-gap: 4%;
+    border: 1px solid #EAEAEA;
+    height: 25vh;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+
+    @include for-phone-only {
+        display: flex;
+        flex-direction: column;
+        // height: 60vh;
+        height: auto;
+    }
+
+    .leftImgSection {
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid #EAEAEA;
+        background: url('https://cdn.hipwallpaper.com/i/67/28/iXmQZ1.jpg');
+        border-radius: 8px 0 0 8px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    .rightSection {
+        padding: 8px 1rem 8px 0;
+        
+        @include for-phone-only {
+            padding: 8px;
+        }
+
+        .articleTitle {
+            margin-top: 0;
+            font-size: 1.5rem;
+
+            @include for-phone-only {
+                margin-bottom: 8px;
+            }
+        }
+
+        .content {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+            @include for-phone-only {
+                -webkit-line-clamp: 2;
+            }
+        }
+
+        .actionContainer {
+            display: flex;
+            justify-content: space-between;
+
+            @include for-phone-only {
+                flex-direction: column;
+            }
+        }
+
+        .viewMore {
+            color: #007BFF;
+            cursor: pointer;
+        }
+    }
+}

@@ -35,6 +35,11 @@ const Article = props => {
                     </div>
                     <div className={styles.articleBody}>
                         {article.body}
+                        <span
+                            className={styles.viewAll} 
+                            onClick={() =>  props.history.push('/articles')}>
+                            View all articles
+                        </span>
                     </div>
                 </div>
             </div>
