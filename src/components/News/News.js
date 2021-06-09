@@ -36,15 +36,17 @@ const News = props => {
 
     return (
         <div className={styles.newsContainer}>
-            <div className={styles.newsHeader}>
-                <p className={styles.title}>News</p>
-                <span 
-                    className={styles.viewAll}
-                    onClick={() =>  props.history.push('/articles')}>
-                    View all articles
-                </span>
-            </div>
-            {/* <p>Coming Soon...</p> */}
+            {
+                Object.keys(props.news).length > 0 &&
+                <div className={styles.newsHeader}>
+                    <p className={styles.title}>News</p>
+                    <span 
+                        className={styles.viewAll}
+                        onClick={() =>  props.history.push('/articles')}>
+                        View all articles
+                    </span>
+                </div>
+            }
             <div className={styles.articlesContainer}>
                 { news }
             </div>

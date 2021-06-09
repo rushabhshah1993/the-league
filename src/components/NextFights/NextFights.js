@@ -75,7 +75,10 @@ const NextFights = props => {
 
     return (
         <div className={styles.nextFightsContainer}>
-            <p className={styles.title}>Next Fights</p>
+            {
+                Object.keys(props.rounds).length > 0 &&
+                <p className={styles.title}>Next Fights</p>
+            }
             { divisions }
         </div>
     )
