@@ -6,7 +6,7 @@ import styles from './articles.scss';
 const Articles = props => {
     let news = props.news;
     let allNews;
-    const [activeFilter, setActiveFilter] = useState('dateAsc');
+    const [activeFilter, setActiveFilter] = useState('dateDesc');
     const filters = [
         {
             id: 'dateAsc',
@@ -42,18 +42,17 @@ const Articles = props => {
         )
     })
 
-
-
     const navigateToArticle = id => {
         props.history.push(`/article/${id}`);
     }
 
     if(props.news.length === 0) {
         allNews = <p>Loading articles...</p>
-    } else {
+    } else if(Object.keys(props.fighterImgs).length > 0) {
         allNews = news.map(article => {
-            let imagesURL = './../../assets/images/';
-            let articleImageURL = imagesURL + article.articleImg + '.png';
+            // let imagesURL = './../../assets/images/';
+            // let articleImageURL = imagesURL + article.articleImg + '.png';
+            let articleImageURL = props.fighterImgs[article.articleImg];
             let date = new Date(article.date.dateAdded).toString();
     
             return (
@@ -98,7 +97,8 @@ const Articles = props => {
 
 const mapStateToProps = state => {
     return {
-        news: state.news
+        news: state.news,
+        fighterImgs: state.fighterImgs
     }
 }
 

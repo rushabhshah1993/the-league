@@ -8,9 +8,10 @@ const Article = props => {
     let article = props.news.find(article => 
         article.newsId === props.match.params.articleId);
     
-    if(article) {
-        let imagesURL = './../../assets/images/';
-        let articleImageURL = imagesURL + article.articleImg + '.png';
+    if(article && Object.keys(props.fighterImgs).length > 0) {
+        // let imagesURL = './../../assets/images/';
+        // let articleImageURL = imagesURL + article.articleImg + '.png';
+        let articleImageURL = props.fighterImgs[article.articleImg];
         let articleDate = new Date(article.date.dateAdded).toLocaleString();
 
         element = (
