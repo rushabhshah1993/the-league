@@ -23,6 +23,12 @@
     .articlesContainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+
+        @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+        }
 
         @include for-phone-only {
             display: flex;
@@ -40,6 +46,10 @@
             display: flex;
             align-items: flex-end;
             cursor: pointer;
+
+            @include for-phone-only {
+                margin-bottom: 1rem;
+            }
 
             .bg {
                 height: 300px;

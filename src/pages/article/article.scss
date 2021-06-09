@@ -1,0 +1,35 @@
+@import './../../utilities/mixins';
+@import './../../utilities/variables';
+
+.articleContainer {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #EAEAEA;
+        // background: rgba(0, 0, 0, .5);
+        background: url('https://cdn.hipwallpaper.com/i/67/28/iXmQZ1.jpg');
+
+        .articleImg {
+            max-height: 50vh;
+        }
+    }
+    
+    .content {
+    
+        .title p {
+            font-size: 2rem;
+            font-weight: 500; 
+            margin-bottom: 0;       
+        }
+
+        .articleMeta {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .articleBody {
+            padding-bottom: 2rem;
+        }
+    }
+}

@@ -1,10 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
 import styles from './news.scss';
 
 const News = props => {
-    let news = props.news.map(article => {
+    const navigateToArticle = id => {
+        props.history.push(`/article/${id}`);
+    }
+
+    props.news.sort((a,b) => {
+        return new Date(b.date.dateAdded) - new Date(a.date.dateAdded)
+    });
+
+    let propsNews = props.news.slice(0, 3);
+
+    let news = propsNews.map(article => {
         let img;
         if(article.img.indexOf('http') === -1) {
             img = props.fighterImgs[article.img]
@@ -15,7 +26,8 @@ const News = props => {
                 style={{
                     backgroundImage: `url(${img})`
                 }}
-                key={article.newsId}>
+                key={article.newsId}
+                onClick={() => navigateToArticle(article.newsId)}>
                     <div className={styles.bg}></div>
                     <p>{article.title}</p>
             </div>
@@ -43,4 +55,6 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(News);
+export default withRouter(
+    connect(mapStateToProps)(News)
+);
