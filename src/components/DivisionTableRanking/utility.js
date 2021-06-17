@@ -40,3 +40,75 @@ export const createTableData = (divisionData, fighters) => {
 
 
 // https://jsfiddle.net/a9ocdexg/
+
+// Final table: https://jsfiddle.net/sg0woen4/1/
+
+// Final table points calculation code
+
+const sortFighterPoints = fighters => {
+    let fightersRank = {};
+    for(let index in fighters) {
+        let restFighters = [...fighters];
+        let fighterData = fightersData[fighters[index]].rounds;
+        restFighters.splice(index, 1)
+        let total = 0;
+            
+        for(let opponent of restFighters) {
+            let roundNo = Object.keys(fighterData).find(round => fighterData[round].fighter === opponent);
+            if(fighterData[roundNo].result === "win") total += 3;
+        }
+        fightersRank[fighters[index]] = total;
+    }
+    let sortedRanks = Object.keys(fightersRank).sort((a, b) => {
+        return fightersRank[b] - fightersRank[a];
+    })
+    return sortedRanks;
+}
+  
+const finalTableRankings = list => {
+    let arr = [];
+    let byPoints = Object.keys(list).sort((a, b) => b - a).reduce((arrr, key) => {
+        arrr = [...arrr, ...list[key]];
+        return arrr;
+    }, []);
+    return byPoints;
+}
+
+
+function sortDivisionByPoints(points) {
+    let fightersByPoints = {};
+    for(let fighter in points) {
+        let fighterPoints = points[fighter];
+        if(Object.keys(fightersByPoints).length === 0) {
+            let arr = [];
+            arr.push(fighter);
+            fightersByPoints[points[fighter]] = arr;
+        } else if(fightersByPoints[fighterPoints] === undefined) {
+            let arr = [];
+            arr.push(fighter);
+            fightersByPoints[fighterPoints] = arr;
+        } else {
+            fightersByPoints[fighterPoints].push(fighter);
+        }
+    }
+    
+    let sorted_fightersByPoints = {};
+    for(let points in fightersByPoints) {
+        if(fightersByPoints[points].length > 1) {
+            let sortedFighters = sortFighterPoints(fightersByPoints[points]);
+            sorted_fightersByPoints[points] = sortedFighters;
+        } else {
+            sorted_fightersByPoints[points] = fightersByPoints[points];
+        }
+    }
+    
+    let ultimateRankings = finalTableRankings(sorted_fightersByPoints);
+	console.log(ultimateRankings);
+    fullTable(ultimateRankings);
+}
+
+function fullTable(ranks) {
+	let arr = [];
+	let fullFighterTable = ranks.map(fighter => fightersData[fighter]);
+    console.log(fullFighterTable);
+}
