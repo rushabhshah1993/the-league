@@ -38,3 +38,25 @@ export const updateDivisionLeader = (divisionId, leaderId) => {
             })
     }
 }
+
+export const setFinalRankings = (divisionId, list) => {
+    return dispatch => {
+        axios.put(`https://the-league-f702f-default-rtdb.firebaseio.com/finalRanking/${divisionId}.json`, {list})
+            .then(response => {
+                dispatch(addFinalRankings(divisionId, list));
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+}
+
+export const addFinalRankings = (divisionId, list) => {
+    return {
+        type: actions.ADD_FINAL_RANKINGS,
+        payload: {
+            division: divisionId,
+            list: list
+        }
+    }
+}

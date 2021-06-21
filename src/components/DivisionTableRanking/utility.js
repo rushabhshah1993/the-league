@@ -105,7 +105,7 @@ export function sortDivisionByPoints(points, fightersData) {
     }
     
     let ultimateRankings = finalTableRankings(sorted_fightersByPoints);
-	console.log(ultimateRankings);
+	// console.log(ultimateRankings);
     return fullTable(ultimateRankings, fightersData);
 }
 

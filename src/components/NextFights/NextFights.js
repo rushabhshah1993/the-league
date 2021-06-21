@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import styles from './nextfights.scss';
 
+import { isEmpty } from 'lodash';
+
 const getLastFiveFights = (fighter, fighters) => {
     let fighterFinishedFights = Object.keys(fighter.rounds)
         .filter(round => fighter.rounds[round].result !== false)
@@ -32,12 +34,16 @@ const getLastFiveFights = (fighter, fighters) => {
 const NextFights = props => {
     let divisions = Object.keys(props.rounds).map(division => {
         let divisionData = props.rounds[division];
+        console.log("Division Data:   ", divisionData);
         let nextFightForRound = Object.keys(divisionData)
         .filter(round => divisionData[round].current)
         .reduce((obj, key) => {
             let fights = divisionData[key].fights;
             return fights.find(fight => !fight.winner);
         }, {});
+        if(isEmpty(nextFightForRound)) {
+            return null;
+        }
         
         let fighter1 = props.fighters[nextFightForRound.fighter1];
         let fighter2 = props.fighters[nextFightForRound.fighter2];

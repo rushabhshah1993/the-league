@@ -31,6 +31,8 @@ const ChooseWinner = props => {
         let lastFightOfTheRound = incompleteFights.length === 1;
         let loserFighter = selectedFighter === fighter1.id ? fighter2.id : fighter1.id;
 
+        let finalRound = props.divisions[divisionId].currentRound !== props.rounds[divisionId].length;
+
         updateFighterData(selectedFighter, roundId);
         updateRoundsData(divisionId, roundId, props.fightId, selectedFighter);
         updateDivisionsData(divisionId, selectedFighter, roundId, lastFightOfTheRound);
@@ -87,25 +89,28 @@ const ChooseWinner = props => {
     const updateDivisionsData = (divisionId, fighterId, roundId, lastFightOfTheRound) => {
         let pointsData = props.divisions[divisionId].points;
         pointsData[fighterId] += 3;
+        
         if(lastFightOfTheRound) {
             // props.divisions[divisionId].currentRound = +roundId.slice(-1) + 1;
-            props.divisions[divisionId].currentRound = +roundId.split("round")[1] + 1;
+            if(props.divisions[divisionId].currentRound === props.rounds[divisionId].length) {
+                props.divisions[divisionId].currentRound = "complete";
+            } else {
+                props.divisions[divisionId].currentRound = +roundId.split("round")[1] + 1;
+            }
         }
 
         props.addDivisionPoints(props.divisions);
-        //Ranking logic to be defined
-        // for(let fighter in pointsData) {
-            
-        // }
     }
 
     const updateTableData = (divisionId, roundId, winnerId, lastFightOfTheRound, loserId) => {
+        let finalRound = props.divisions[divisionId].currentRound !== props.rounds[divisionId].length;
+        
         props.table[divisionId][roundId][winnerId] += 3;
         props.table[divisionId][roundId][loserId] += 0;
         if(lastFightOfTheRound) {
             // let nextRoundId = `round${+roundId.slice(-1) + 1}`;
             let nextRoundId = `round${+roundId.split("round")[1] + 1}`;
-            props.table[divisionId][nextRoundId] = props.table[divisionId][roundId];
+            if(!finalRound) props.table[divisionId][nextRoundId] = props.table[divisionId][roundId];
         }
         props.addRoundPointsToTable(props.table);
     }  

@@ -11,6 +11,10 @@ import {
     sortDivisionByPoints
 } from './../DivisionTableRanking/utility';
 
+import {
+    setFinalRankings
+} from './../../actions/divisionsActions';
+
 const DivisionRound = props => {
     const [roundElement, setRoundElements] = useState([]);
     const [roundNumber, setCurrentRound] = useState(null);
@@ -96,11 +100,14 @@ const DivisionRound = props => {
     } else {
         if(Object.keys(props.rounds).length > 0) {
             let currentRound = props.divisions[props.divisionId]?.currentRound;
-            let divisionTotalRounds = Object.keys(props?.rounds[props?.divisionId]).length;
-            if((currentRound > divisionTotalRounds) && Object.keys(props.fighters).length > 0) {
-                console.log("Division is over", props.fighters);
+            // let divisionTotalRounds = Object.keys(props?.rounds[props?.divisionId]).length;
+            // if((currentRound > divisionTotalRounds) && Object.keys(props.fighters).length > 0) {
+            if((currentRound === 'complete') && Object.keys(props.fighters).length > 0) {
+                // console.log("Division is over", props.fighters);
                 let finalRankings = sortDivisionByPoints(props.divisions[props.divisionId].points, props.fighters);
-                console.log(finalRankings);
+                if(!props.divisions[props.divisionId].finalTable) {
+                    props.setFinalRankings(props.divisionId, finalRankings);
+                }
                 let finalRankingItem = finalRankings.map(fighter => {
                     return (
                         <li key={fighter.id} style={{display: 'flex'}}>
@@ -173,4 +180,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(DivisionRound);
+const mapDispatchToProps = dispatch => {
+    return {
+        setFinalRankings: (divisionId, list) => dispatch(setFinalRankings(divisionId, list))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DivisionRound);
