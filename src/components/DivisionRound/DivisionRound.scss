@@ -1,5 +1,14 @@
 @import './../../utilities/mixins';
 
+
+.fighterImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #EAEAEA;
+    margin-right: 8px;
+}
+
 .divisionRoundContainer {
     .fighterImg {
         height: 50px;

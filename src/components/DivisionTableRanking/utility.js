@@ -45,7 +45,7 @@ export const createTableData = (divisionData, fighters) => {
 
 // Final table points calculation code
 
-const sortFighterPoints = fighters => {
+const sortFighterPoints = (fighters, fightersData) => {
     let fightersRank = {};
     for(let index in fighters) {
         let restFighters = [...fighters];
@@ -57,11 +57,13 @@ const sortFighterPoints = fighters => {
             let roundNo = Object.keys(fighterData).find(round => fighterData[round].fighter === opponent);
             if(fighterData[roundNo].result === "win") total += 3;
         }
+        // console.log(fighters[index], total);
         fightersRank[fighters[index]] = total;
     }
     let sortedRanks = Object.keys(fightersRank).sort((a, b) => {
         return fightersRank[b] - fightersRank[a];
     })
+    // console.log("Sorted Ranks:   ", sortedRanks);
     return sortedRanks;
 }
   
@@ -75,7 +77,7 @@ const finalTableRankings = list => {
 }
 
 
-function sortDivisionByPoints(points) {
+export function sortDivisionByPoints(points, fightersData) {
     let fightersByPoints = {};
     for(let fighter in points) {
         let fighterPoints = points[fighter];
@@ -95,7 +97,7 @@ function sortDivisionByPoints(points) {
     let sorted_fightersByPoints = {};
     for(let points in fightersByPoints) {
         if(fightersByPoints[points].length > 1) {
-            let sortedFighters = sortFighterPoints(fightersByPoints[points]);
+            let sortedFighters = sortFighterPoints(fightersByPoints[points], fightersData);
             sorted_fightersByPoints[points] = sortedFighters;
         } else {
             sorted_fightersByPoints[points] = fightersByPoints[points];
@@ -104,11 +106,12 @@ function sortDivisionByPoints(points) {
     
     let ultimateRankings = finalTableRankings(sorted_fightersByPoints);
 	console.log(ultimateRankings);
-    fullTable(ultimateRankings);
+    return fullTable(ultimateRankings, fightersData);
 }
 
-function fullTable(ranks) {
+function fullTable(ranks, fightersData) {
 	let arr = [];
 	let fullFighterTable = ranks.map(fighter => fightersData[fighter]);
-    console.log(fullFighterTable);
+    // console.log(fullFighterTable);
+    return fullFighterTable;
 }
