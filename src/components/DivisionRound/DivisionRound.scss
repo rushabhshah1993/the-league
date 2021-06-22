@@ -9,6 +9,45 @@
     margin-right: 8px;
 }
 
+.roundInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .viewRounds {
+        color: #33B5E5;
+        cursor: pointer;
+        font-size: 14px;
+    }
+}
+.finalTable{
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        height: 70vh;
+        overflow-y: scroll;
+    }
+
+    .finalTableList {
+        display: flex;
+        margin-bottom: 12px;
+        justify-content: space-between;
+
+        .fighterPrimaryInfo {
+            display: flex;
+
+            .rankLabel {
+                margin-right: 4px;
+            }
+        }
+
+        .qualified {
+            color: #28A745;
+        }
+    }
+}
+
+
 .divisionRoundContainer {
     .fighterImg {
         height: 50px;

@@ -17,59 +17,60 @@ const FightsSection = props => {
             return fights[key].result === false;
         })
 
-        nextFight = fights[nextFightId];
-
         let fighter = props.fighters[props.fighterId];
-        let nextFighter = props.fighters[nextFight.fighter];
-
-        let nextFighterFinishedFights = Object.keys(nextFighter.rounds)
-        .filter(round => nextFighter.rounds[round].result !== false)
-        .reduce((result, key) => {
-            nextFighter.rounds[key].round = key;
-            result.push(nextFighter.rounds[key]);
-            return result;
-          }, []);
-        nextFighterFinishedFights.sort((a, b) => {
-            return +a.round.split("round")[1] - +b.round.split("round")[1];
-        })
-        let lastFiveFightsArr = nextFighterFinishedFights.slice(-5);
-
-        let lastFiveFightsDot = lastFiveFightsArr.map(fight => {
-            return (
-                <div 
-                    key={fight.round}
-                    title={`Round ${fight.round.slice(-1)}: ${fight.result} against ${props.fighters[fight.fighter].firstName}`}
-                    className={fight.result === "win" ? styles.winDot : styles.lostDot}></div>
+        nextFight = fights[nextFightId];
+        if(nextFight) {
+            let nextFighter = props.fighters[nextFight.fighter];
+    
+            let nextFighterFinishedFights = Object.keys(nextFighter.rounds)
+            .filter(round => nextFighter.rounds[round].result !== false)
+            .reduce((result, key) => {
+                nextFighter.rounds[key].round = key;
+                result.push(nextFighter.rounds[key]);
+                return result;
+              }, []);
+            nextFighterFinishedFights.sort((a, b) => {
+                return +a.round.split("round")[1] - +b.round.split("round")[1];
+            })
+            let lastFiveFightsArr = nextFighterFinishedFights.slice(-5);
+    
+            let lastFiveFightsDot = lastFiveFightsArr.map(fight => {
+                return (
+                    <div 
+                        key={fight.round}
+                        title={`Round ${fight.round.slice(-1)}: ${fight.result} against ${props.fighters[fight.fighter].firstName}`}
+                        className={fight.result === "win" ? styles.winDot : styles.lostDot}></div>
+                )
+            })
+    
+            lastFiveFightsElement = (
+                <div className={styles.nextFighterLastFive}>
+                    <p>{nextFighter.firstName}'s performance:</p>
+                    <div className={styles.lastFiveContainer}>{lastFiveFightsDot}</div>
+                </div>
             )
-        })
-
-        lastFiveFightsElement = (
-            <div className={styles.nextFighterLastFive}>
-                <p>{nextFighter.firstName}'s performance:</p>
-                <div className={styles.lastFiveContainer}>{lastFiveFightsDot}</div>
-            </div>
-        )
-
-
-        nextFightElement = (
-            <div className={styles.fighterRow}>
-                <div className={styles.fighterSection}>
-                    <img 
-                        // src={`./../../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
-                        src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]}
-                        className={styles.fighterImg} />
-                    <span className={styles.fighterName}>{fighter.firstName} {fighter.lastName}</span>
+    
+    
+            nextFightElement = (
+                <div className={styles.fighterRow}>
+                    <div className={styles.fighterSection}>
+                        <img 
+                            // src={`./../../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
+                            src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]}
+                            className={styles.fighterImg} />
+                        <span className={styles.fighterName}>{fighter.firstName} {fighter.lastName}</span>
+                    </div>
+                    <div className={styles.vsText}>vs</div>
+                    <div className={styles.fighterSection}>
+                        <img 
+                            // src={`./../../../assets/images/${nextFighter.firstName} ${nextFighter.lastName}.png`}
+                            src={props.fighterImgs[`${nextFighter.firstName} ${nextFighter.lastName}`]}
+                            className={styles.fighterImg} />
+                        <span className={styles.fighterName}>{nextFighter.firstName} {nextFighter.lastName}</span>
+                    </div>
                 </div>
-                <div className={styles.vsText}>vs</div>
-                <div className={styles.fighterSection}>
-                    <img 
-                        // src={`./../../../assets/images/${nextFighter.firstName} ${nextFighter.lastName}.png`}
-                        src={props.fighterImgs[`${nextFighter.firstName} ${nextFighter.lastName}`]}
-                        className={styles.fighterImg} />
-                    <span className={styles.fighterName}>{nextFighter.firstName} {nextFighter.lastName}</span>
-                </div>
-            </div>
-        )
+            )
+        }
 
         allFightsElement = Object.keys(fights).map(key => {
             let fight = fights[key];
@@ -85,7 +86,6 @@ const FightsSection = props => {
                     <div className={styles.fighterRow}>
                         <div className={styles.fighterSection}>
                             <img 
-                                // src={`./../../../assets/images/${fighter.firstName} ${fighter.lastName}.png`}
                                 src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]}
                                 className={styles.fighterImg} />
                             <span className={styles.fighterName}>{fighter.firstName} {fighter.lastName}</span>
@@ -94,7 +94,6 @@ const FightsSection = props => {
                         <div className={styles.fighterSection}>
                             <span className={styles.fighterName}>{opponent.firstName}</span>
                             <img 
-                                // src={`./../../../assets/images/${opponent.firstName} ${opponent.lastName}.png`}
                                 src={props.fighterImgs[`${opponent.firstName} ${opponent.lastName}`]}
                                 className={styles.fighterImg} />
                         </div>
@@ -108,11 +107,14 @@ const FightsSection = props => {
     
     return (
         <div>
-            <div className={styles.nextFightSection}>
-                <p>Next Fight</p>
-                { nextFightElement }
-                { lastFiveFightsElement }
-            </div>
+            {
+                nextFight &&
+                <div className={styles.nextFightSection}>
+                    <p>Next Fight</p>
+                    { nextFightElement }
+                    { lastFiveFightsElement }
+                </div>
+            }
             <div className={styles.allFightsSection}>
                 <p>All Fights</p>
                 { allFightsElement }

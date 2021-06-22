@@ -12,6 +12,7 @@ module.exports = {
         filename: 'index.bundle.js',
         publicPath: '/'
     },
+    devtool: 'source-map',
     mode: process.env.NODE_ENV || 'development',
     resolve: {
         modules: [

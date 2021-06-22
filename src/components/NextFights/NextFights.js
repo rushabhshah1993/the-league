@@ -34,7 +34,7 @@ const getLastFiveFights = (fighter, fighters) => {
 const NextFights = props => {
     let divisions = Object.keys(props.rounds).map(division => {
         let divisionData = props.rounds[division];
-        console.log("Division Data:   ", divisionData);
+        // console.log("Division Data:   ", divisionData);
         let nextFightForRound = Object.keys(divisionData)
         .filter(round => divisionData[round].current)
         .reduce((obj, key) => {

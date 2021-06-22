@@ -37,6 +37,10 @@ const DivisionRound = props => {
         if(roundNumber === null) setCurrentRound(props.divisions[props.divisionId]?.currentRound);
     }
 
+    const navigateToRounds = () => {
+        history.push(`/rounds/${roundNumber}`, {division: props.divisionId});
+    }
+
 
     if(currentRound.length > 0 
         && Object.keys(props.fighters).length > 0 
@@ -96,11 +100,11 @@ const DivisionRound = props => {
         })
 
         
-        if(roundElement.length === 0) setRoundElements(htmlElement);
+    if(roundElement.length === 0) setRoundElements(htmlElement);
     } else {
         if(Object.keys(props.rounds).length > 0) {
             let currentRound = props.divisions[props.divisionId]?.currentRound;
-            // let divisionTotalRounds = Object.keys(props?.rounds[props?.divisionId]).length;
+            let divisionTotalRounds = Object.keys(props?.rounds[props?.divisionId]).length;
             // if((currentRound > divisionTotalRounds) && Object.keys(props.fighters).length > 0) {
             if((currentRound === 'complete') && Object.keys(props.fighters).length > 0) {
                 // console.log("Division is over", props.fighters);
@@ -108,17 +112,40 @@ const DivisionRound = props => {
                 if(!props.divisions[props.divisionId].finalTable) {
                     props.setFinalRankings(props.divisionId, finalRankings);
                 }
-                let finalRankingItem = finalRankings.map(fighter => {
+                let finalRankingItem = finalRankings.map((fighter, index) => {
                     return (
-                        <li key={fighter.id} style={{display: 'flex'}}>
-                            <img 
-                                src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]}
-                                className={styles.fighterImg} />
-                            <p>{fighter.firstName} {fighter.lastName}</p>
+                        <li key={fighter.id} className={styles.finalTableList}>
+                            <div className={styles.fighterPrimaryInfo}>
+                                <p className={styles.rankLabel}>{index+1}. </p>
+                                <img 
+                                    src={props.fighterImgs[`${fighter.firstName} ${fighter.lastName}`]}
+                                    className={styles.fighterImg} />
+                                <p>{fighter.firstName} {fighter.lastName}</p>
+                            </div>
+                            {
+                                index < 3 && props.divisionId.indexOf(1) === -1 &&
+                                <p className={styles.qualified}>Promoted</p>
+                            }
+                            {
+                                index > divisionTotalRounds - 3 && props.divisionId.indexOf(3) === -1 &&
+                                <p className={styles.qualified}>Relegated</p>
+                            }
                         </li>
                     )
                 })
-                finalTable = <ul>{finalRankingItem}</ul>;
+                finalTable = (
+                    <div className={styles.finalTable}>
+                        <div className={styles.roundInfo}>
+                            <p>Final Rankings</p>
+                            <span 
+                                className={styles.viewRounds}
+                                onClick={navigateToRounds}>
+                                View all rounds for Division {props.divisionId.slice(-1)}
+                            </span>
+                        </div>
+                       <ul>{finalRankingItem}</ul>
+                    </div>
+                );
             }
         }
     }
@@ -132,10 +159,6 @@ const DivisionRound = props => {
     const updatedRoundWinner = () => {
         showModal(false);
         // location.reload();
-    }
-
-    const navigateToRounds = () => {
-        history.push(`/rounds/${roundNumber}`, {division: props.divisionId});
     }
  
     return (
