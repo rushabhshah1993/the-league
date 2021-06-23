@@ -10,6 +10,7 @@ import Round from './../round/Round';
 import Navbar from '../../common/Navbar/Navbar';
 import Articles from './../articles/Articles';
 import Article from './../article/Article';
+import CreatePost from '../createpost/CreatePost/CreatePost';
 
 import {
     fetchDivisionsData
@@ -69,6 +70,7 @@ const Layout = props => {
                 <Route path={'/rounds/:roundId'} exact component={Round} />
                 <Route path={'/articles'} exact component={Articles} />
                 <Route path={'/article/:articleId'} exact component={Article} />
+                <Route path={'/createpost'} exact component={CreatePost} />
                 <Route path={'/'} exact component={Home} />
             </Switch>
         </div>

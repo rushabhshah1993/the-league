@@ -19,3 +19,12 @@ export const setNews = news => {
         news: news
     }
 }
+
+export const addNewArticle = data => {
+    return dispatch => {
+        axios.put(`https://the-league-f702f-default-rtdb.firebaseio.com/news.json`, data)
+            .then(response => {
+                setNews(response.data);
+            })
+    }
+}

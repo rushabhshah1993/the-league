@@ -1,0 +1,36 @@
+.createPostContainer {
+    padding-bottom: 2rem;
+
+    .inputItem {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+        input {
+            padding: 8px 0;
+            border: none;
+            border-bottom: 1px solid #9b9b9b;
+            outline: none;
+            font-size: 16px;
+        }
+
+        textarea {
+            font-size: 16px;
+            font-family: 'Roboto';
+        }
+    }
+
+    .createBtn {
+        background-color: #17A2B8;
+        color: #FFFFFF;
+        width: fit-content;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .disabledBtn {
+        pointer-events: none;
+        background: #EAEAEA;
+    }
+}
