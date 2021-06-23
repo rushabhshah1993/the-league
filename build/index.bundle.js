@@ -2625,7 +2625,7 @@ var ChooseWinner = function ChooseWinner(props) {
 
     if (lastFightOfTheRound) {
       // props.divisions[divisionId].currentRound = +roundId.slice(-1) + 1;
-      if (props.divisions[divisionId].currentRound === props.rounds[divisionId].length) {
+      if (+props.divisions[divisionId].currentRound === props.rounds[divisionId].length) {
         props.divisions[divisionId].currentRound = "complete";
       } else {
         props.divisions[divisionId].currentRound = +roundId.split("round")[1] + 1;
@@ -3263,14 +3263,14 @@ var sortFighterPoints = function sortFighterPoints(fighters, fightersData) {
 
       for (_iterator.s(); !(_step = _iterator.n()).done;) {
         _loop2();
-      } // console.log(fighters[index], total);
-
+      }
     } catch (err) {
       _iterator.e(err);
     } finally {
       _iterator.f();
     }
 
+    console.log(fighters[index], total);
     fightersRank[fighters[index]] = total;
   };
 
@@ -3280,8 +3280,8 @@ var sortFighterPoints = function sortFighterPoints(fighters, fightersData) {
 
   var sortedRanks = Object.keys(fightersRank).sort(function (a, b) {
     return fightersRank[b] - fightersRank[a];
-  }); // console.log("Sorted Ranks:   ", sortedRanks);
-
+  });
+  console.log("Sorted Ranks:   ", sortedRanks);
   return sortedRanks;
 };
 
