@@ -57,13 +57,13 @@ const sortFighterPoints = (fighters, fightersData) => {
             let roundNo = Object.keys(fighterData).find(round => fighterData[round].fighter === opponent);
             if(fighterData[roundNo].result === "win") total += 3;
         }
-        // console.log(fighters[index], total);
+        console.log(fighters[index], total);
         fightersRank[fighters[index]] = total;
     }
     let sortedRanks = Object.keys(fightersRank).sort((a, b) => {
         return fightersRank[b] - fightersRank[a];
     })
-    // console.log("Sorted Ranks:   ", sortedRanks);
+    console.log("Sorted Ranks:   ", sortedRanks);
     return sortedRanks;
 }
   

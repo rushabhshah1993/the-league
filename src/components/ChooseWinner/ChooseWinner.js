@@ -92,7 +92,7 @@ const ChooseWinner = props => {
         
         if(lastFightOfTheRound) {
             // props.divisions[divisionId].currentRound = +roundId.slice(-1) + 1;
-            if(props.divisions[divisionId].currentRound === props.rounds[divisionId].length) {
+            if(+props.divisions[divisionId].currentRound === props.rounds[divisionId].length) {
                 props.divisions[divisionId].currentRound = "complete";
             } else {
                 props.divisions[divisionId].currentRound = +roundId.split("round")[1] + 1;
