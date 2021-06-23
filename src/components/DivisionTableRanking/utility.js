@@ -57,13 +57,13 @@ const sortFighterPoints = (fighters, fightersData) => {
             let roundNo = Object.keys(fighterData).find(round => fighterData[round].fighter === opponent);
             if(fighterData[roundNo].result === "win") total += 3;
         }
-        console.log(fighters[index], total);
+        // console.log(fighters[index], total);
         fightersRank[fighters[index]] = total;
     }
     let sortedRanks = Object.keys(fightersRank).sort((a, b) => {
         return fightersRank[b] - fightersRank[a];
     })
-    console.log("Sorted Ranks:   ", sortedRanks);
+    // console.log("Sorted Ranks:   ", sortedRanks);
     return sortedRanks;
 }
   
@@ -114,4 +114,24 @@ function fullTable(ranks, fightersData) {
 	let fullFighterTable = ranks.map(fighter => fightersData[fighter]);
     // console.log(fullFighterTable);
     return fullFighterTable;
+}
+
+export const fetchFinalRankTable = (fighters, ranksList, pointsData) => {
+    let finalList = [];
+    for(let fighterObj of ranksList) {
+        let fighter = fighters[fighterObj.id];
+
+        if(fighter !== undefined) {
+            let obj = {
+                name: `${fighter.firstName} ${fighter.lastName}`,
+                total: fighter.fights.total,
+                win: fighter.fights.won,
+                points: pointsData[fighterObj.id],
+                lastRoundGained: fighter.lastRoundGained,
+                id: fighter.id
+            };
+            finalList.push(obj);
+        }
+    }
+    return finalList;
 }

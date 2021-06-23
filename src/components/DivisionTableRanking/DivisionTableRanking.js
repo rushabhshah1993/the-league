@@ -8,6 +8,9 @@ import styles from './DivisionTableRanking.scss';
 import {
     updateDivisionLeader
 } from './../../actions/divisionsActions';
+import {
+    fetchFinalRankTable
+} from './utility';
 
 const DivisionTableRanking = props => {
     const [tableHeaders, setTableHeaders] = useState([]);
@@ -16,8 +19,18 @@ const DivisionTableRanking = props => {
 
     let divisionData = props.divisions[props.divisionId];
 
+    
     if(divisionData !== undefined && Object.keys(props.fighterImgs).length > 0) {
-        let tableData = createTableData(divisionData, props.fighters);
+        let tableData;
+        if(props.finalRanks[props.divisionId]?.list) {
+            tableData = fetchFinalRankTable(
+                props.fighters, 
+                props.finalRanks[props.divisionId].list, 
+                divisionData.points
+            );
+        } else {
+            tableData = createTableData(divisionData, props.fighters);
+        }
         if(tableData.length > 0) {
             let headers = Object.keys(tableData[0]);
             headers.unshift('rank');
@@ -71,7 +84,8 @@ const mapStateToProps = state => {
     return {
         fighters: state.fighters,
         divisions: state.divisions,
-        fighterImgs: state.fighterImgs
+        fighterImgs: state.fighterImgs,
+        finalRanks: state.finalRanks
     }
 }
 

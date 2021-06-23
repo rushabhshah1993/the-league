@@ -30,6 +30,7 @@ const divisionsReducer = (state=initialState, action) => {
         case actions.ADD_FINAL_RANKINGS:
             updatedState = cloneDeep(state);
             updatedState[action.payload.division]["finalTable"] = action.payload.list;
+            updatedState[action.payload.division]["finalTableRanks"] = action.payload.rankData;
             return updatedState;
         default: return state;
     }

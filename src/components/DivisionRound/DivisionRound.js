@@ -8,7 +8,8 @@ import Modal from './../../common/Modal/Modal';
 import ChooseWinner from '../ChooseWinner/ChooseWinner';
 
 import {
-    sortDivisionByPoints
+    sortDivisionByPoints,
+    fetchFinalRankTable
 } from './../DivisionTableRanking/utility';
 
 import {
@@ -109,9 +110,10 @@ const DivisionRound = props => {
             if((currentRound === 'complete') && Object.keys(props.fighters).length > 0) {
                 // console.log("Division is over", props.fighters);
                 let finalRankings = sortDivisionByPoints(props.divisions[props.divisionId].points, props.fighters);
-                if(!props.divisions[props.divisionId].finalTable) {
-                    props.setFinalRankings(props.divisionId, finalRankings);
-                }
+                fetchFinalRankTable(props.fighters, finalRankings, props.divisions[props.divisionId].points);
+                // if(!props.divisions[props.divisionId].finalTable) {
+                //     props.setFinalRankings(props.divisionId, finalRankings);
+                // }
                 let finalRankingItem = finalRankings.map((fighter, index) => {
                     return (
                         <li key={fighter.id} className={styles.finalTableList}>

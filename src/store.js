@@ -7,6 +7,7 @@ import fightersReducer from './reducers/fightersReducers';
 import roundsReducer from './reducers/roundsReducer';
 import fighterImgReducer from './reducers/fighterImgReducer';
 import newsReducer from './reducers/newsReducer';
+import finalRankingsReducer from './reducers/finalRankingsReducer';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -17,7 +18,8 @@ const store = createStore(
         fighters: fightersReducer,
         rounds: roundsReducer,
         fighterImgs: fighterImgReducer,
-        news: newsReducer
+        news: newsReducer,
+        finalRanks: finalRankingsReducer
     }),
     {},
     composeEnhancers(
